@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace QuizManagementSystem
 {
-    public partial class Form1 : Form
+    public partial class StudentViewResults : Form
     {
-        public Form1()
+        public StudentViewResults()
         {
             InitializeComponent();
+        }
+
+        private void MainMenuButton_Click(object sender, EventArgs e)
+        {
+            StudentMainMenu smm = new StudentMainMenu();
+            this.Hide();
+            smm.Show();
         }
     }
 }
