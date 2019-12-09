@@ -48,7 +48,9 @@ namespace QuizManagementSystem
 
         private void TeacherEditRecordbutton_Click(object sender, EventArgs e)
         {
-
+            TeacherEditRecords ter = new TeacherEditRecords();
+            this.Hide();
+            ter.Show();
         }
 
         private void TeacherSignOutbutton_Click(object sender, EventArgs e)

@@ -32,11 +32,12 @@
             this.UsernametextBox = new System.Windows.Forms.TextBox();
             this.PasswardtextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.RolecomboBox = new System.Windows.Forms.ComboBox();
             this.SignInbutton = new System.Windows.Forms.Button();
             this.SignUplinkLabel = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.TeacherLoginradioButton = new System.Windows.Forms.RadioButton();
+            this.StudentLoginradioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -71,18 +72,6 @@
             this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Role";
-            // 
-            // RolecomboBox
-            // 
-            this.RolecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RolecomboBox.FormattingEnabled = true;
-            this.RolecomboBox.Items.AddRange(new object[] {
-            "Student",
-            "Teacher"});
-            this.RolecomboBox.Location = new System.Drawing.Point(83, 230);
-            this.RolecomboBox.Name = "RolecomboBox";
-            this.RolecomboBox.Size = new System.Drawing.Size(240, 32);
-            this.RolecomboBox.TabIndex = 5;
             // 
             // SignInbutton
             // 
@@ -131,6 +120,35 @@
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
+            // TeacherLoginradioButton
+            // 
+            this.TeacherLoginradioButton.AutoSize = true;
+            this.TeacherLoginradioButton.BackColor = System.Drawing.Color.Transparent;
+            this.TeacherLoginradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeacherLoginradioButton.ForeColor = System.Drawing.Color.White;
+            this.TeacherLoginradioButton.Location = new System.Drawing.Point(217, 235);
+            this.TeacherLoginradioButton.Name = "TeacherLoginradioButton";
+            this.TeacherLoginradioButton.Size = new System.Drawing.Size(106, 28);
+            this.TeacherLoginradioButton.TabIndex = 24;
+            this.TeacherLoginradioButton.TabStop = true;
+            this.TeacherLoginradioButton.Text = "Teacher";
+            this.TeacherLoginradioButton.UseVisualStyleBackColor = false;
+            // 
+            // StudentLoginradioButton
+            // 
+            this.StudentLoginradioButton.AutoSize = true;
+            this.StudentLoginradioButton.BackColor = System.Drawing.Color.Transparent;
+            this.StudentLoginradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentLoginradioButton.ForeColor = System.Drawing.Color.White;
+            this.StudentLoginradioButton.Location = new System.Drawing.Point(83, 235);
+            this.StudentLoginradioButton.Name = "StudentLoginradioButton";
+            this.StudentLoginradioButton.Size = new System.Drawing.Size(99, 28);
+            this.StudentLoginradioButton.TabIndex = 23;
+            this.StudentLoginradioButton.TabStop = true;
+            this.StudentLoginradioButton.Text = "Student";
+            this.StudentLoginradioButton.UseVisualStyleBackColor = false;
+           
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,11 +157,12 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(389, 428);
             this.ControlBox = false;
+            this.Controls.Add(this.TeacherLoginradioButton);
+            this.Controls.Add(this.StudentLoginradioButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SignUplinkLabel);
             this.Controls.Add(this.SignInbutton);
-            this.Controls.Add(this.RolecomboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PasswardtextBox);
             this.Controls.Add(this.UsernametextBox);
@@ -161,10 +180,11 @@
         private System.Windows.Forms.TextBox UsernametextBox;
         private System.Windows.Forms.TextBox PasswardtextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox RolecomboBox;
         private System.Windows.Forms.Button SignInbutton;
         private System.Windows.Forms.LinkLabel SignUplinkLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.RadioButton TeacherLoginradioButton;
+        private System.Windows.Forms.RadioButton StudentLoginradioButton;
     }
 }

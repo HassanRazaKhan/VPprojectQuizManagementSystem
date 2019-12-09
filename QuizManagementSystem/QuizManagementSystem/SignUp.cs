@@ -19,32 +19,64 @@ namespace QuizManagementSystem
 
         private void SignUpbutton_Click(object sender, EventArgs e)
         {
-            if(SignupUsernametextBox.Text != null && SignupPasswardtextBox.Text!=null && SignupEmailtextBox.Text != null && SignupDepartmenttextBox.Text != null)
+            if(StudentSignupradioButton.Checked)
             {
-                try
-                {
-                    Connection obj = new Connection();
-                    obj.con.ConnectionString = obj.locate;
-                    obj.con.Open();
-                    string insertUser ="insert into SignUpTable values ('"+SignupUsernametextBox.Text+"','"+SignupPasswardtextBox.Text+ "','" + SignupEmailtextBox.Text + "','" + SignupDepartmenttextBox.Text+ "')";
-                    obj.cmd.Connection = obj.con;
-                    obj.cmd.CommandText = insertUser;
-                    obj.cmd.ExecuteNonQuery();
-                    obj.con.Close();
-                    MessageBox.Show("SignUp has been completed Successfully");
+                if(SignupUsernametextBox.Text != null && SignupPasswardtextBox.Text != null && SignupEmailtextBox.Text != null && SignupDepartmenttextBox.Text != null)
+            {
+                    try
+                    {
+                        Connection obj = new Connection();
+                        obj.con.ConnectionString = obj.locate;
+                        obj.con.Open();
+                        string insertUser = "insert into Students values ('" + SignupUsernametextBox.Text + "','" + SignupPasswardtextBox.Text + "','" + SignupEmailtextBox.Text + "','" + SignupDepartmenttextBox.Text + "')";
+                        obj.cmd.Connection = obj.con;
+                        obj.cmd.CommandText = insertUser;
+                        obj.cmd.ExecuteNonQuery();
+                        obj.con.Close();
+                        MessageBox.Show("SignUp has been completed Successfully");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error" + ex);
+                    }
                 }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Error" + ex);
-                }
-            }
             else
-            {
-                MessageBox.Show("Error!");
+                {
+                    MessageBox.Show("Error!");
+                }
+                LoginForm lf = new LoginForm();
+                this.Hide();
+                lf.Show();
             }
-            LoginForm lf = new LoginForm();
-            this.Hide();
-            lf.Show();
+            if(TeacherSignupradioButton.Checked)
+            {
+                if(SignupUsernametextBox.Text != null && SignupPasswardtextBox.Text != null && SignupEmailtextBox.Text != null && SignupDepartmenttextBox.Text != null)
+            {
+                    try
+                    {
+                        Connection obj = new Connection();
+                        obj.con.ConnectionString = obj.locate;
+                        obj.con.Open();
+                        string insertUser = "insert into Teachers values ('" + SignupUsernametextBox.Text + "','" + SignupPasswardtextBox.Text + "','" + SignupEmailtextBox.Text + "','" + SignupDepartmenttextBox.Text + "')";
+                        obj.cmd.Connection = obj.con;
+                        obj.cmd.CommandText = insertUser;
+                        obj.cmd.ExecuteNonQuery();
+                        obj.con.Close();
+                        MessageBox.Show("SignUp has been completed Successfully");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error" + ex);
+                    }
+                }
+            else
+                {
+                    MessageBox.Show("Error!");
+                }
+                LoginForm lf = new LoginForm();
+                this.Hide();
+                lf.Show();
+            }
 
         }
     }

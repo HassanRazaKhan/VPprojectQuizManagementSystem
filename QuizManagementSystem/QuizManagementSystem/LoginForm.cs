@@ -28,41 +28,74 @@ namespace QuizManagementSystem
         
         private void SignInbutton_Click(object sender, EventArgs e)
         {
-
-          if(UsernametextBox.Text != null && PasswardtextBox.Text != null)
+            if (StudentLoginradioButton.Checked)
             {
-                try
+                if (UsernametextBox.Text != null && PasswardtextBox.Text != null)
                 {
-                    Connection obj = new Connection();
-                    obj.con.ConnectionString = obj.locate;
-                    obj.con.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter("Select COUNT (*) FROM SignUpTable where Username ='" + UsernametextBox.Text + "' and Passward ='" + PasswardtextBox.Text + "'", obj.con);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    if(dt.Rows[0][0].ToString()=="1")
+                    try
                     {
-                        TeacherMainMenu tmm = new TeacherMainMenu();
-                        this.Hide();
-                        tmm.Show();
+                        Connection obj = new Connection();
+                        obj.con.ConnectionString = obj.locate;
+                        obj.con.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter("Select COUNT (*) FROM Students where Username ='" + UsernametextBox.Text + "' and Passward ='" + PasswardtextBox.Text + "'", obj.con);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        if (dt.Rows[0][0].ToString() == "1")
+                        {
+                            StudentMainMenu smm = new StudentMainMenu();
+                            this.Hide();
+                            smm.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username or Passward is incorrect");
+                        }
+                        obj.con.Close();
+
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Username or Passward is incorrect");
+                        MessageBox.Show(ex.Message);
                     }
-                    obj.con.Close();
-                    MessageBox.Show("Successfully Login");
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
                 }
             }
-          else
+          if(TeacherLoginradioButton.Checked)
             {
-                MessageBox.Show("No empty fields are allowed");
+                if (UsernametextBox.Text != null && PasswardtextBox.Text != null)
+                {
+                    try
+                    {
+                        Connection obj = new Connection();
+                        obj.con.ConnectionString = obj.locate;
+                        obj.con.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter("Select COUNT (*) FROM Teachers where Username ='" + UsernametextBox.Text + "' and Passward ='" + PasswardtextBox.Text + "'", obj.con);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        if (dt.Rows[0][0].ToString() == "1")
+                        {
+                            TeacherMainMenu tmm = new TeacherMainMenu();
+                            this.Hide();
+                            tmm.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username or Passward is incorrect");
+                        }
+                        obj.con.Close();
 
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
             
+            
         }
+
+       
+          
+        
     }
 }
