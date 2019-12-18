@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuizManagementSystem
 {
@@ -22,6 +23,23 @@ namespace QuizManagementSystem
             TeacherMainMenu tmm = new TeacherMainMenu();
             this.Hide();
             tmm.Show();
+        }
+
+        private void SearchStudentButton_Click(object sender, EventArgs e)
+        {
+
+            Connection obj = new Connection();
+            obj.con.ConnectionString = obj.locate;
+            obj.con.Open();
+            SqlCommand cmd = obj.con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select * from Students where Username ='" + SearchStudenttextBox.Text + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            viewStudentsdataGridView.DataSource = dt;
+            obj.con.Close();
         }
     }
 }

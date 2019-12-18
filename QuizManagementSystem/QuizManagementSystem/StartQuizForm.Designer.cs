@@ -38,7 +38,6 @@
             this.OptionAtextBox = new System.Windows.Forms.TextBox();
             this.QuestiontextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.selectCourseComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.EnterQuizIDtextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +45,9 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CourseNametextBox = new System.Windows.Forms.TextBox();
+            this.StartQuizbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateQuiz1button
@@ -87,6 +89,7 @@
             // 
             // OptionDtextBox
             // 
+            this.OptionDtextBox.Enabled = false;
             this.OptionDtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OptionDtextBox.Location = new System.Drawing.Point(560, 380);
             this.OptionDtextBox.Name = "OptionDtextBox";
@@ -95,6 +98,7 @@
             // 
             // OptionCtextBox
             // 
+            this.OptionCtextBox.Enabled = false;
             this.OptionCtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OptionCtextBox.Location = new System.Drawing.Point(119, 380);
             this.OptionCtextBox.Name = "OptionCtextBox";
@@ -103,6 +107,7 @@
             // 
             // OptionBtextBox
             // 
+            this.OptionBtextBox.Enabled = false;
             this.OptionBtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OptionBtextBox.Location = new System.Drawing.Point(560, 302);
             this.OptionBtextBox.Name = "OptionBtextBox";
@@ -111,6 +116,7 @@
             // 
             // OptionAtextBox
             // 
+            this.OptionAtextBox.Enabled = false;
             this.OptionAtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OptionAtextBox.Location = new System.Drawing.Point(119, 302);
             this.OptionAtextBox.Name = "OptionAtextBox";
@@ -119,6 +125,7 @@
             // 
             // QuestiontextBox
             // 
+            this.QuestiontextBox.Enabled = false;
             this.QuestiontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestiontextBox.Location = new System.Drawing.Point(48, 172);
             this.QuestiontextBox.Multiline = true;
@@ -138,18 +145,6 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Question";
             // 
-            // selectCourseComboBox
-            // 
-            this.selectCourseComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectCourseComboBox.FormattingEnabled = true;
-            this.selectCourseComboBox.Items.AddRange(new object[] {
-            "Student",
-            "Teacher"});
-            this.selectCourseComboBox.Location = new System.Drawing.Point(227, 72);
-            this.selectCourseComboBox.Name = "selectCourseComboBox";
-            this.selectCourseComboBox.Size = new System.Drawing.Size(238, 32);
-            this.selectCourseComboBox.TabIndex = 26;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -158,9 +153,8 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(44, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 24);
+            this.label2.Size = new System.Drawing.Size(0, 24);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Select Course";
             // 
             // EnterQuizIDtextBox
             // 
@@ -238,6 +232,39 @@
             this.radioButton3.Text = "D)";
             this.radioButton3.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(44, 75);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 24);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Course Name";
+            // 
+            // CourseNametextBox
+            // 
+            this.CourseNametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseNametextBox.Location = new System.Drawing.Point(227, 70);
+            this.CourseNametextBox.Name = "CourseNametextBox";
+            this.CourseNametextBox.Size = new System.Drawing.Size(238, 29);
+            this.CourseNametextBox.TabIndex = 45;
+            // 
+            // StartQuizbutton
+            // 
+            this.StartQuizbutton.BackColor = System.Drawing.Color.Lime;
+            this.StartQuizbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartQuizbutton.ForeColor = System.Drawing.Color.White;
+            this.StartQuizbutton.Location = new System.Drawing.Point(738, 12);
+            this.StartQuizbutton.Name = "StartQuizbutton";
+            this.StartQuizbutton.Size = new System.Drawing.Size(141, 91);
+            this.StartQuizbutton.TabIndex = 46;
+            this.StartQuizbutton.Text = "Start Quiz";
+            this.StartQuizbutton.UseVisualStyleBackColor = false;
+            this.StartQuizbutton.Click += new System.EventHandler(this.StartQuizbutton_Click);
+            // 
             // StartQuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +273,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.StartQuizbutton);
+            this.Controls.Add(this.CourseNametextBox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -259,7 +289,6 @@
             this.Controls.Add(this.OptionAtextBox);
             this.Controls.Add(this.QuestiontextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.selectCourseComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EnterQuizIDtextBox);
             this.Controls.Add(this.label1);
@@ -281,7 +310,6 @@
         private System.Windows.Forms.TextBox OptionAtextBox;
         private System.Windows.Forms.TextBox QuestiontextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox selectCourseComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox EnterQuizIDtextBox;
         private System.Windows.Forms.Label label1;
@@ -289,5 +317,8 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox CourseNametextBox;
+        private System.Windows.Forms.Button StartQuizbutton;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuizManagementSystem
 {
@@ -50,6 +51,7 @@ namespace QuizManagementSystem
             }
             if(TeacherSignupradioButton.Checked)
             {
+               
                 if(SignupUsernametextBox.Text != null && SignupPasswardtextBox.Text != null && SignupEmailtextBox.Text != null && SignupDepartmenttextBox.Text != null)
             {
                     try
@@ -79,5 +81,7 @@ namespace QuizManagementSystem
             }
 
         }
+
+     
     }
 }

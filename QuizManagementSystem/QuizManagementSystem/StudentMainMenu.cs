@@ -55,7 +55,9 @@ namespace QuizManagementSystem
 
         private void StartQuizbutton_Click(object sender, EventArgs e)
         {
-
+            StartQuizForm sqf = new StartQuizForm();
+            this.Hide();
+            sqf.Show();
         }
     }
 }

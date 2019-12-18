@@ -9,9 +9,15 @@ namespace QuizManagementSystem
 {
     class Connection
     {
-        public SqlConnection con = new SqlConnection();
-        public SqlCommand cmd = new SqlCommand();
+
         public string locate = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Hassan Raza Khan\Source\Repos\HassanRazaKhan\VPprojectQuizManagementSystem\QuizManagementSystem\QuizManagementSystem\ProjectDatabase.mdf';Integrated Security=True";
+        public SqlConnection con;
+        public SqlCommand cmd = new SqlCommand();
+        public Connection()
+        {
+            con = new SqlConnection(locate);
+        }
+       
 
     }
 }

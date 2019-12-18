@@ -32,7 +32,6 @@
             this.QuizIDtextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.selectCourseComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.AddQuestiontextBox = new System.Windows.Forms.TextBox();
             this.OptionAtextBox = new System.Windows.Forms.TextBox();
@@ -47,6 +46,9 @@
             this.NextQuestionbutton = new System.Windows.Forms.Button();
             this.CreateQuiz1button = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CorrectAnswertextBox = new System.Windows.Forms.TextBox();
+            this.CourseNametextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // QuizIDtextBox
@@ -77,21 +79,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(45, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 24);
+            this.label2.Size = new System.Drawing.Size(138, 24);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Select Course";
-            // 
-            // selectCourseComboBox
-            // 
-            this.selectCourseComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectCourseComboBox.FormattingEnabled = true;
-            this.selectCourseComboBox.Items.AddRange(new object[] {
-            "Student",
-            "Teacher"});
-            this.selectCourseComboBox.Location = new System.Drawing.Point(228, 76);
-            this.selectCourseComboBox.Name = "selectCourseComboBox";
-            this.selectCourseComboBox.Size = new System.Drawing.Size(238, 32);
-            this.selectCourseComboBox.TabIndex = 8;
+            this.label2.Text = "Course Name";
             // 
             // label3
             // 
@@ -99,7 +89,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 149);
+            this.label3.Location = new System.Drawing.Point(45, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 24);
             this.label3.TabIndex = 9;
@@ -108,7 +98,7 @@
             // AddQuestiontextBox
             // 
             this.AddQuestiontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddQuestiontextBox.Location = new System.Drawing.Point(49, 176);
+            this.AddQuestiontextBox.Location = new System.Drawing.Point(49, 155);
             this.AddQuestiontextBox.Multiline = true;
             this.AddQuestiontextBox.Name = "AddQuestiontextBox";
             this.AddQuestiontextBox.Size = new System.Drawing.Size(815, 87);
@@ -117,7 +107,7 @@
             // OptionAtextBox
             // 
             this.OptionAtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionAtextBox.Location = new System.Drawing.Point(120, 306);
+            this.OptionAtextBox.Location = new System.Drawing.Point(120, 263);
             this.OptionAtextBox.Name = "OptionAtextBox";
             this.OptionAtextBox.Size = new System.Drawing.Size(321, 29);
             this.OptionAtextBox.TabIndex = 12;
@@ -128,7 +118,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(45, 309);
+            this.label4.Location = new System.Drawing.Point(45, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 24);
             this.label4.TabIndex = 11;
@@ -137,7 +127,7 @@
             // OptionBtextBox
             // 
             this.OptionBtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionBtextBox.Location = new System.Drawing.Point(561, 306);
+            this.OptionBtextBox.Location = new System.Drawing.Point(561, 263);
             this.OptionBtextBox.Name = "OptionBtextBox";
             this.OptionBtextBox.Size = new System.Drawing.Size(303, 29);
             this.OptionBtextBox.TabIndex = 14;
@@ -148,7 +138,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(478, 309);
+            this.label5.Location = new System.Drawing.Point(478, 266);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 24);
             this.label5.TabIndex = 13;
@@ -157,7 +147,7 @@
             // OptionCtextBox
             // 
             this.OptionCtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionCtextBox.Location = new System.Drawing.Point(120, 384);
+            this.OptionCtextBox.Location = new System.Drawing.Point(120, 341);
             this.OptionCtextBox.Name = "OptionCtextBox";
             this.OptionCtextBox.Size = new System.Drawing.Size(321, 29);
             this.OptionCtextBox.TabIndex = 16;
@@ -168,7 +158,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(45, 387);
+            this.label6.Location = new System.Drawing.Point(45, 344);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 24);
             this.label6.TabIndex = 15;
@@ -177,7 +167,7 @@
             // OptionDtextBox
             // 
             this.OptionDtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionDtextBox.Location = new System.Drawing.Point(561, 384);
+            this.OptionDtextBox.Location = new System.Drawing.Point(561, 341);
             this.OptionDtextBox.Name = "OptionDtextBox";
             this.OptionDtextBox.Size = new System.Drawing.Size(303, 29);
             this.OptionDtextBox.TabIndex = 18;
@@ -188,7 +178,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(478, 387);
+            this.label7.Location = new System.Drawing.Point(478, 344);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 24);
             this.label7.TabIndex = 17;
@@ -230,6 +220,7 @@
             this.CreateQuiz1button.TabIndex = 21;
             this.CreateQuiz1button.Text = "Create Quiz";
             this.CreateQuiz1button.UseVisualStyleBackColor = false;
+            this.CreateQuiz1button.Click += new System.EventHandler(this.CreateQuiz1button_Click);
             // 
             // label8
             // 
@@ -243,6 +234,34 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "*must be unique";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(224, 410);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(154, 24);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Correct Answer";
+            // 
+            // CorrectAnswertextBox
+            // 
+            this.CorrectAnswertextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CorrectAnswertextBox.Location = new System.Drawing.Point(411, 407);
+            this.CorrectAnswertextBox.Name = "CorrectAnswertextBox";
+            this.CorrectAnswertextBox.Size = new System.Drawing.Size(321, 29);
+            this.CorrectAnswertextBox.TabIndex = 24;
+            // 
+            // CourseNametextBox
+            // 
+            this.CourseNametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseNametextBox.Location = new System.Drawing.Point(228, 79);
+            this.CourseNametextBox.Name = "CourseNametextBox";
+            this.CourseNametextBox.Size = new System.Drawing.Size(238, 29);
+            this.CourseNametextBox.TabIndex = 25;
+            // 
             // CreateQuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +270,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.CourseNametextBox);
+            this.Controls.Add(this.CorrectAnswertextBox);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CreateQuiz1button);
             this.Controls.Add(this.NextQuestionbutton);
@@ -265,7 +287,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.AddQuestiontextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.selectCourseComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.QuizIDtextBox);
             this.Controls.Add(this.label1);
@@ -281,7 +302,6 @@
         private System.Windows.Forms.TextBox QuizIDtextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox selectCourseComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox AddQuestiontextBox;
         private System.Windows.Forms.TextBox OptionAtextBox;
@@ -296,5 +316,8 @@
         private System.Windows.Forms.Button NextQuestionbutton;
         private System.Windows.Forms.Button CreateQuiz1button;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox CorrectAnswertextBox;
+        private System.Windows.Forms.TextBox CourseNametextBox;
     }
 }
