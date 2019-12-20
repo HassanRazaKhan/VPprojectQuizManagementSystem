@@ -59,5 +59,10 @@ namespace QuizManagementSystem
             this.Hide();
             lf.Show();
         }
+
+        private void TeacherMainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,12 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Conformbutton = new System.Windows.Forms.Button();
             this.MainMenuButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EnterOldUsernamStudentetextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // StudentsEditPasswardtextBox
             // 
             this.StudentsEditPasswardtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentsEditPasswardtextBox.Location = new System.Drawing.Point(369, 174);
+            this.StudentsEditPasswardtextBox.Location = new System.Drawing.Point(389, 204);
             this.StudentsEditPasswardtextBox.Name = "StudentsEditPasswardtextBox";
             this.StudentsEditPasswardtextBox.Size = new System.Drawing.Size(405, 29);
             this.StudentsEditPasswardtextBox.TabIndex = 43;
@@ -55,16 +57,16 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(186, 177);
+            this.label5.Location = new System.Drawing.Point(140, 209);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 24);
+            this.label5.Size = new System.Drawing.Size(203, 24);
             this.label5.TabIndex = 42;
-            this.label5.Text = "Passward";
+            this.label5.Text = "Enter New Passward";
             // 
             // StudentsEditEmailtextBox
             // 
             this.StudentsEditEmailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentsEditEmailtextBox.Location = new System.Drawing.Point(369, 235);
+            this.StudentsEditEmailtextBox.Location = new System.Drawing.Point(389, 265);
             this.StudentsEditEmailtextBox.Name = "StudentsEditEmailtextBox";
             this.StudentsEditEmailtextBox.Size = new System.Drawing.Size(405, 29);
             this.StudentsEditEmailtextBox.TabIndex = 41;
@@ -75,16 +77,16 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(186, 240);
+            this.label4.Location = new System.Drawing.Point(140, 270);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 24);
+            this.label4.Size = new System.Drawing.Size(166, 24);
             this.label4.TabIndex = 40;
-            this.label4.Text = "Email";
+            this.label4.Text = "Enter New Email";
             // 
             // StudentsEditDepartmenttextBox
             // 
             this.StudentsEditDepartmenttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentsEditDepartmenttextBox.Location = new System.Drawing.Point(369, 301);
+            this.StudentsEditDepartmenttextBox.Location = new System.Drawing.Point(389, 331);
             this.StudentsEditDepartmenttextBox.Name = "StudentsEditDepartmenttextBox";
             this.StudentsEditDepartmenttextBox.Size = new System.Drawing.Size(405, 29);
             this.StudentsEditDepartmenttextBox.TabIndex = 39;
@@ -95,16 +97,16 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(186, 306);
+            this.label2.Location = new System.Drawing.Point(140, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 24);
+            this.label2.Size = new System.Drawing.Size(221, 24);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Department";
+            this.label2.Text = "Enter New Department";
             // 
             // StudentsEditUsernametextBox
             // 
             this.StudentsEditUsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentsEditUsernametextBox.Location = new System.Drawing.Point(369, 112);
+            this.StudentsEditUsernametextBox.Location = new System.Drawing.Point(389, 142);
             this.StudentsEditUsernametextBox.Name = "StudentsEditUsernametextBox";
             this.StudentsEditUsernametextBox.Size = new System.Drawing.Size(405, 29);
             this.StudentsEditUsernametextBox.TabIndex = 37;
@@ -115,11 +117,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(186, 115);
+            this.label1.Location = new System.Drawing.Point(140, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 24);
+            this.label1.Size = new System.Drawing.Size(209, 24);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Username";
+            this.label1.Text = "Enter New Username";
             // 
             // Conformbutton
             // 
@@ -132,6 +134,7 @@
             this.Conformbutton.TabIndex = 35;
             this.Conformbutton.Text = "Confirm";
             this.Conformbutton.UseVisualStyleBackColor = false;
+            this.Conformbutton.Click += new System.EventHandler(this.Conformbutton_Click);
             // 
             // MainMenuButton
             // 
@@ -146,6 +149,26 @@
             this.MainMenuButton.UseVisualStyleBackColor = false;
             this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(140, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 24);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Enter Old Username";
+            // 
+            // EnterOldUsernamStudentetextBox
+            // 
+            this.EnterOldUsernamStudentetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnterOldUsernamStudentetextBox.Location = new System.Drawing.Point(385, 79);
+            this.EnterOldUsernamStudentetextBox.Name = "EnterOldUsernamStudentetextBox";
+            this.EnterOldUsernamStudentetextBox.Size = new System.Drawing.Size(405, 29);
+            this.EnterOldUsernamStudentetextBox.TabIndex = 44;
+            // 
             // StudentEditRecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +177,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.EnterOldUsernamStudentetextBox);
             this.Controls.Add(this.StudentsEditPasswardtextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.StudentsEditEmailtextBox);
@@ -184,5 +209,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Conformbutton;
         private System.Windows.Forms.Button MainMenuButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox EnterOldUsernamStudentetextBox;
     }
 }

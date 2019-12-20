@@ -52,14 +52,14 @@ namespace QuizManagementSystem
             if(TeacherSignupradioButton.Checked)
             {
                
-                if(SignupUsernametextBox.Text != null && SignupPasswardtextBox.Text != null && SignupEmailtextBox.Text != null && SignupDepartmenttextBox.Text != null)
+                if(SignupUsernametextBox.Text != null && SignupPasswardtextBox.Text != null && SignupEmailtextBox.Text != null && SignupDepartmenttextBox.Text != null && TeacherSignupCourseNametextBox.Text != null)
             {
                     try
                     {
                         Connection obj = new Connection();
                         obj.con.ConnectionString = obj.locate;
                         obj.con.Open();
-                        string insertUser = "insert into Teachers values ('" + SignupUsernametextBox.Text + "','" + SignupPasswardtextBox.Text + "','" + SignupEmailtextBox.Text + "','" + SignupDepartmenttextBox.Text + "')";
+                        string insertUser = "insert into Teachers values ('" + SignupUsernametextBox.Text + "','" + SignupPasswardtextBox.Text + "','" + SignupEmailtextBox.Text + "','" + SignupDepartmenttextBox.Text + "','" + TeacherSignupCourseNametextBox.Text + "')";
                         obj.cmd.Connection = obj.con;
                         obj.cmd.CommandText = insertUser;
                         obj.cmd.ExecuteNonQuery();
@@ -82,6 +82,23 @@ namespace QuizManagementSystem
 
         }
 
-     
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+            CourseNamelabel.Visible = false;
+            TeacherSignupCourseNametextBox.Visible = false;
+        }
+
+        private void StudentSignupradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+            CourseNamelabel.Visible = false;
+            TeacherSignupCourseNametextBox.Visible = false;
+        }
+
+        private void TeacherSignupradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            CourseNamelabel.Visible = true;
+            TeacherSignupCourseNametextBox.Visible = true;
+        }
     }
 }

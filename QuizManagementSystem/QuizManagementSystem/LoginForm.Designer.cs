@@ -147,7 +147,6 @@
             this.StudentLoginradioButton.TabStop = true;
             this.StudentLoginradioButton.Text = "Student";
             this.StudentLoginradioButton.UseVisualStyleBackColor = false;
-           
             // 
             // LoginForm
             // 

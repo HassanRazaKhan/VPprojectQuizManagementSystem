@@ -16,6 +16,21 @@ namespace QuizManagementSystem
         public ViewStudentsForm()
         {
             InitializeComponent();
+            viewStudentsdataGridView.BackgroundColor = Color.MediumPurple;
+            viewStudentsdataGridView.ForeColor = Color.Black;
+            viewStudentsdataGridView.BorderStyle = BorderStyle.Fixed3D;
+              Connection obj = new Connection();
+            obj.con.ConnectionString = obj.locate;
+            obj.con.Open();
+            SqlCommand cmd = obj.con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select  Username,Email,Department  from Students";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            viewStudentsdataGridView.DataSource = dt;
+            obj.con.Close();
         }
 
         private void MainMenuButton_Click(object sender, EventArgs e)
@@ -33,13 +48,33 @@ namespace QuizManagementSystem
             obj.con.Open();
             SqlCommand cmd = obj.con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from Students where Username ='" + SearchStudenttextBox.Text + "'";
+            cmd.CommandText = "Select Username,Email,Department from Students where Username ='" + SearchStudenttextBox.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             viewStudentsdataGridView.DataSource = dt;
             obj.con.Close();
+        }
+
+        private void ViewStudentsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchStudenttextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewStudentsdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
