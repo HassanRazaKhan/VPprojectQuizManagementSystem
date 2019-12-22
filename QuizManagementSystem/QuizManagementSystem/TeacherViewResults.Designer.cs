@@ -35,6 +35,7 @@
             // MainMenuButton
             // 
             this.MainMenuButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.MainMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.MainMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuButton.ForeColor = System.Drawing.Color.White;
             this.MainMenuButton.Location = new System.Drawing.Point(629, 464);

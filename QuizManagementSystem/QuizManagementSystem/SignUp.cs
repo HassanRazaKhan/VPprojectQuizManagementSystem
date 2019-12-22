@@ -100,5 +100,43 @@ namespace QuizManagementSystem
             CourseNamelabel.Visible = true;
             TeacherSignupCourseNametextBox.Visible = true;
         }
+
+        private void SignupEmailtextBox_Enter(object sender, EventArgs e)
+        {
+            if (SignupEmailtextBox.Text == "someone@gmail.com")
+            {
+                SignupEmailtextBox.Text = "";
+                SignupEmailtextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void SignupEmailtextBox_Leave(object sender, EventArgs e)
+        {
+            if (SignupEmailtextBox.Text == "")
+            {
+                SignupEmailtextBox.Text = "someone@gmail.com";
+                SignupEmailtextBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void SignupDepartmenttextBox_Enter(object sender, EventArgs e)
+        {
+
+            if (SignupDepartmenttextBox.Text == "e.g. : Software Engineering")
+            {
+                SignupDepartmenttextBox.Text = "";
+                SignupDepartmenttextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void SignupDepartmenttextBox_Leave(object sender, EventArgs e)
+        {
+
+            if (SignupDepartmenttextBox.Text == "")
+            {
+                SignupDepartmenttextBox.Text = "e.g. : Software Engineering";
+                SignupDepartmenttextBox.ForeColor = Color.Gray;
+            }
+        }
     }
 }

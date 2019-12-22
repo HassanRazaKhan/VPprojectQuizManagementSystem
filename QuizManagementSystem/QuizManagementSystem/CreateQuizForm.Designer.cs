@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateQuizForm));
             this.QuizIDtextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +49,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.CorrectAnswertextBox = new System.Windows.Forms.TextBox();
-            this.CourseNametextBox = new System.Windows.Forms.TextBox();
+            this.projectDatabaseDataSet = new QuizManagementSystem.ProjectDatabaseDataSet();
+            this.projectDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CourseNamecomboBox = new System.Windows.Forms.ComboBox();
+            this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.teachersTableAdapter = new QuizManagementSystem.ProjectDatabaseDataSetTableAdapters.TeachersTableAdapter();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // QuizIDtextBox
@@ -187,6 +196,7 @@
             // MainMenuButton
             // 
             this.MainMenuButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.MainMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuButton.ForeColor = System.Drawing.Color.White;
             this.MainMenuButton.Location = new System.Drawing.Point(32, 465);
@@ -200,6 +210,7 @@
             // NextQuestionbutton
             // 
             this.NextQuestionbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.NextQuestionbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextQuestionbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextQuestionbutton.ForeColor = System.Drawing.Color.White;
             this.NextQuestionbutton.Location = new System.Drawing.Point(327, 465);
@@ -208,10 +219,12 @@
             this.NextQuestionbutton.TabIndex = 20;
             this.NextQuestionbutton.Text = "Next Question";
             this.NextQuestionbutton.UseVisualStyleBackColor = false;
+            this.NextQuestionbutton.Click += new System.EventHandler(this.NextQuestionbutton_Click);
             // 
             // CreateQuiz1button
             // 
             this.CreateQuiz1button.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.CreateQuiz1button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateQuiz1button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateQuiz1button.ForeColor = System.Drawing.Color.White;
             this.CreateQuiz1button.Location = new System.Drawing.Point(624, 465);
@@ -254,13 +267,43 @@
             this.CorrectAnswertextBox.Size = new System.Drawing.Size(321, 29);
             this.CorrectAnswertextBox.TabIndex = 24;
             // 
-            // CourseNametextBox
+            // projectDatabaseDataSet
             // 
-            this.CourseNametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseNametextBox.Location = new System.Drawing.Point(228, 79);
-            this.CourseNametextBox.Name = "CourseNametextBox";
-            this.CourseNametextBox.Size = new System.Drawing.Size(238, 29);
-            this.CourseNametextBox.TabIndex = 25;
+            this.projectDatabaseDataSet.DataSetName = "ProjectDatabaseDataSet";
+            this.projectDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectDatabaseDataSetBindingSource
+            // 
+            this.projectDatabaseDataSetBindingSource.DataSource = this.projectDatabaseDataSet;
+            this.projectDatabaseDataSetBindingSource.Position = 0;
+            // 
+            // CourseNamecomboBox
+            // 
+            this.CourseNamecomboBox.DataSource = this.teachersBindingSource;
+            this.CourseNamecomboBox.DisplayMember = "CourseName";
+            this.CourseNamecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseNamecomboBox.FormattingEnabled = true;
+            this.CourseNamecomboBox.Location = new System.Drawing.Point(228, 71);
+            this.CourseNamecomboBox.Name = "CourseNamecomboBox";
+            this.CourseNamecomboBox.Size = new System.Drawing.Size(238, 32);
+            this.CourseNamecomboBox.TabIndex = 25;
+            this.CourseNamecomboBox.ValueMember = "CourseName";
+            // 
+            // teachersBindingSource
+            // 
+            this.teachersBindingSource.DataMember = "Teachers";
+            this.teachersBindingSource.DataSource = this.projectDatabaseDataSetBindingSource;
+            // 
+            // teachersTableAdapter
+            // 
+            this.teachersTableAdapter.ClearBeforeFill = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(699, 12);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 26;
             // 
             // CreateQuizForm
             // 
@@ -270,7 +313,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
-            this.Controls.Add(this.CourseNametextBox);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.CourseNamecomboBox);
             this.Controls.Add(this.CorrectAnswertextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -291,7 +335,12 @@
             this.Controls.Add(this.QuizIDtextBox);
             this.Controls.Add(this.label1);
             this.Name = "CreateQuizForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateQuizForm";
+            this.Load += new System.EventHandler(this.CreateQuizForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,6 +367,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox CorrectAnswertextBox;
-        private System.Windows.Forms.TextBox CourseNametextBox;
+        private System.Windows.Forms.BindingSource projectDatabaseDataSetBindingSource;
+        private ProjectDatabaseDataSet projectDatabaseDataSet;
+        private System.Windows.Forms.ComboBox CourseNamecomboBox;
+        private System.Windows.Forms.BindingSource teachersBindingSource;
+        private ProjectDatabaseDataSetTableAdapters.TeachersTableAdapter teachersTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

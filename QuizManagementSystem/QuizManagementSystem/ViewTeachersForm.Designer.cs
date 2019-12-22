@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTeachersForm));
             this.MainMenuButton = new System.Windows.Forms.Button();
-            this.SearchTeacherButton = new System.Windows.Forms.Button();
             this.SearchTeachertextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.viewTeacherstsdataGridView = new System.Windows.Forms.DataGridView();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.SearchTeacherstpictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.viewTeacherstsdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchTeacherstpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenuButton
             // 
             this.MainMenuButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.MainMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.MainMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuButton.ForeColor = System.Drawing.Color.White;
             this.MainMenuButton.Location = new System.Drawing.Point(634, 465);
@@ -52,38 +53,17 @@
             this.MainMenuButton.UseVisualStyleBackColor = false;
             this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
-            // SearchTeacherButton
-            // 
-            this.SearchTeacherButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.SearchTeacherButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTeacherButton.ForeColor = System.Drawing.Color.White;
-            this.SearchTeacherButton.Location = new System.Drawing.Point(723, 50);
-            this.SearchTeacherButton.Name = "SearchTeacherButton";
-            this.SearchTeacherButton.Size = new System.Drawing.Size(113, 37);
-            this.SearchTeacherButton.TabIndex = 41;
-            this.SearchTeacherButton.Text = "Search";
-            this.SearchTeacherButton.UseVisualStyleBackColor = false;
-            this.SearchTeacherButton.Click += new System.EventHandler(this.SearchTeacherButton_Click);
-            // 
             // SearchTeachertextBox
             // 
             this.SearchTeachertextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTeachertextBox.Location = new System.Drawing.Point(266, 53);
+            this.SearchTeachertextBox.ForeColor = System.Drawing.Color.Gray;
+            this.SearchTeachertextBox.Location = new System.Drawing.Point(298, 53);
             this.SearchTeachertextBox.Name = "SearchTeachertextBox";
-            this.SearchTeachertextBox.Size = new System.Drawing.Size(405, 29);
+            this.SearchTeachertextBox.Size = new System.Drawing.Size(328, 29);
             this.SearchTeachertextBox.TabIndex = 40;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(79, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 24);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Search Teacher";
+            this.SearchTeachertextBox.Text = "Search By Username";
+            this.SearchTeachertextBox.Enter += new System.EventHandler(this.SearchTeachertextBox_Enter);
+            this.SearchTeachertextBox.Leave += new System.EventHandler(this.SearchTeachertextBox_Leave);
             // 
             // viewTeacherstsdataGridView
             // 
@@ -109,6 +89,18 @@
             this.hScrollBar1.Size = new System.Drawing.Size(344, 17);
             this.hScrollBar1.TabIndex = 42;
             // 
+            // SearchTeacherstpictureBox
+            // 
+            this.SearchTeacherstpictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchTeacherstpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SearchTeacherstpictureBox.Image")));
+            this.SearchTeacherstpictureBox.Location = new System.Drawing.Point(602, 53);
+            this.SearchTeacherstpictureBox.Name = "SearchTeacherstpictureBox";
+            this.SearchTeacherstpictureBox.Size = new System.Drawing.Size(40, 29);
+            this.SearchTeacherstpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SearchTeacherstpictureBox.TabIndex = 44;
+            this.SearchTeacherstpictureBox.TabStop = false;
+            this.SearchTeacherstpictureBox.Click += new System.EventHandler(this.SearchStudentpictureBox_Click);
+            // 
             // ViewTeachersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,17 +109,17 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.SearchTeacherstpictureBox);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.hScrollBar1);
-            this.Controls.Add(this.SearchTeacherButton);
             this.Controls.Add(this.SearchTeachertextBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.viewTeacherstsdataGridView);
             this.Controls.Add(this.MainMenuButton);
             this.Name = "ViewTeachersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTeachersForm";
             ((System.ComponentModel.ISupportInitialize)(this.viewTeacherstsdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchTeacherstpictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,11 +128,10 @@
         #endregion
 
         private System.Windows.Forms.Button MainMenuButton;
-        private System.Windows.Forms.Button SearchTeacherButton;
         private System.Windows.Forms.TextBox SearchTeachertextBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView viewTeacherstsdataGridView;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.PictureBox SearchTeacherstpictureBox;
     }
 }

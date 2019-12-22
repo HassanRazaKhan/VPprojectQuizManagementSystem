@@ -45,7 +45,9 @@ namespace QuizManagementSystem
 
         }
 
-        private void SearchTeacherButton_Click(object sender, EventArgs e)
+       
+
+        private void SearchStudentpictureBox_Click(object sender, EventArgs e)
         {
             Connection obj = new Connection();
             obj.con.ConnectionString = obj.locate;
@@ -59,6 +61,24 @@ namespace QuizManagementSystem
             da.Fill(dt);
             viewTeacherstsdataGridView.DataSource = dt;
             obj.con.Close();
+        }
+
+        private void SearchTeachertextBox_Enter(object sender, EventArgs e)
+        {
+            if (SearchTeachertextBox.Text == "Search By Username")
+            {
+                SearchTeachertextBox.Text = "";
+                SearchTeachertextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void SearchTeachertextBox_Leave(object sender, EventArgs e)
+        {
+            if (SearchTeachertextBox.Text == "")
+            {
+                SearchTeachertextBox.Text = "Search By Username";
+                SearchTeachertextBox.ForeColor = Color.Gray;
+            }
         }
     }
 }

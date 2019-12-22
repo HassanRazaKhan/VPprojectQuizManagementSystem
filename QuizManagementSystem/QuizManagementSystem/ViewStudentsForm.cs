@@ -40,7 +40,9 @@ namespace QuizManagementSystem
             tmm.Show();
         }
 
-        private void SearchStudentButton_Click(object sender, EventArgs e)
+      
+       
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
             Connection obj = new Connection();
@@ -57,24 +59,22 @@ namespace QuizManagementSystem
             obj.con.Close();
         }
 
-        private void ViewStudentsForm_Load(object sender, EventArgs e)
+        private void SearchStudenttextBox_Enter(object sender, EventArgs e)
         {
-
+            if (SearchStudenttextBox.Text == "Search By Username")
+            {
+                SearchStudenttextBox.Text = "";
+                SearchStudenttextBox.ForeColor = Color.Black;
+            }
         }
 
-        private void SearchStudenttextBox_TextChanged(object sender, EventArgs e)
+        private void SearchStudenttextBox_Leave(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void viewStudentsdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (SearchStudenttextBox.Text == "")
+            {
+                SearchStudenttextBox.Text = "Search By Username";
+                SearchStudenttextBox.ForeColor = Color.Gray;
+            }
         }
     }
 }

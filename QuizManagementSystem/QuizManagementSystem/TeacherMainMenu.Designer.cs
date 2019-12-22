@@ -65,6 +65,7 @@
             // CreateQuizbutton
             // 
             this.CreateQuizbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.CreateQuizbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CreateQuizbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateQuizbutton.ForeColor = System.Drawing.Color.White;
             this.CreateQuizbutton.Location = new System.Drawing.Point(31, 204);
@@ -78,6 +79,7 @@
             // ViewStudentsbutton
             // 
             this.ViewStudentsbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.ViewStudentsbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ViewStudentsbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewStudentsbutton.ForeColor = System.Drawing.Color.White;
             this.ViewStudentsbutton.Location = new System.Drawing.Point(349, 204);
@@ -91,6 +93,7 @@
             // TeacherViewCoursesbutton
             // 
             this.TeacherViewCoursesbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.TeacherViewCoursesbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TeacherViewCoursesbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeacherViewCoursesbutton.ForeColor = System.Drawing.Color.White;
             this.TeacherViewCoursesbutton.Location = new System.Drawing.Point(665, 204);
@@ -104,6 +107,7 @@
             // TeacherViewResultsbutton
             // 
             this.TeacherViewResultsbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.TeacherViewResultsbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TeacherViewResultsbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeacherViewResultsbutton.ForeColor = System.Drawing.Color.White;
             this.TeacherViewResultsbutton.Location = new System.Drawing.Point(31, 356);
@@ -117,6 +121,7 @@
             // TeacherEditRecordbutton
             // 
             this.TeacherEditRecordbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.TeacherEditRecordbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TeacherEditRecordbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeacherEditRecordbutton.ForeColor = System.Drawing.Color.White;
             this.TeacherEditRecordbutton.Location = new System.Drawing.Point(349, 356);
@@ -130,6 +135,7 @@
             // TeacherSignOutbutton
             // 
             this.TeacherSignOutbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.TeacherSignOutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TeacherSignOutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeacherSignOutbutton.ForeColor = System.Drawing.Color.White;
             this.TeacherSignOutbutton.Location = new System.Drawing.Point(665, 356);

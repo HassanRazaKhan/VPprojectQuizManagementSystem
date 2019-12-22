@@ -27,14 +27,14 @@ namespace QuizManagementSystem
 
         private void CreateQuiz1button_Click(object sender, EventArgs e)
         {
-            if (QuizIDtextBox.Text != null && CourseNametextBox.Text != null && AddQuestiontextBox.Text != null && OptionAtextBox.Text != null && OptionCtextBox.Text != null && OptionDtextBox.Text != null && CorrectAnswertextBox.Text != null)
+            if (QuizIDtextBox.Text != null && CourseNamecomboBox.Text.ToString() != null && AddQuestiontextBox.Text != null && OptionAtextBox.Text != null && OptionCtextBox.Text != null && OptionDtextBox.Text != null && CorrectAnswertextBox.Text != null)
             {
                 try
                 {
                     Connection obj = new Connection();
                     obj.con.ConnectionString = obj.locate;
                     obj.con.Open();
-                    string insertUser = "insert into Questions values ('" + QuizIDtextBox.Text + "','" + CourseNametextBox.Text + "','" + AddQuestiontextBox.Text + "','" + OptionAtextBox.Text + "','" + OptionBtextBox.Text + "','" + OptionCtextBox.Text + "','" + OptionDtextBox.Text + "','" + CorrectAnswertextBox.Text + "')";
+                    string insertUser = "insert into Questions values ('" + QuizIDtextBox.Text + "','" + CourseNamecomboBox.Text.ToString() + "','" + AddQuestiontextBox.Text + "','" + OptionAtextBox.Text + "','" + OptionBtextBox.Text + "','" + OptionCtextBox.Text + "','" + OptionDtextBox.Text + "','" + CorrectAnswertextBox.Text + "')";
                     obj.cmd.Connection = obj.con;
                     obj.cmd.CommandText = insertUser;
                     obj.cmd.ExecuteNonQuery();
@@ -46,6 +46,22 @@ namespace QuizManagementSystem
                     MessageBox.Show("Error" + ex);
                 }
             }
+        }
+
+        private void CreateQuizForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'projectDatabaseDataSet.Teachers' table. You can move, or remove it, as needed.
+            this.teachersTableAdapter.Fill(this.projectDatabaseDataSet.Teachers);
+          
+
+        }
+
+        private void NextQuestionbutton_Click(object sender, EventArgs e)
+        {
+            CreateQuizForm cqf = new CreateQuizForm();
+            this.Hide();
+            cqf.Show();
+
         }
     }
 }

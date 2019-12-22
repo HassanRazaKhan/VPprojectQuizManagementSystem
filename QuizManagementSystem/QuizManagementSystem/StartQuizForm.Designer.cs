@@ -28,31 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartQuizForm));
             this.CreateQuiz1button = new System.Windows.Forms.Button();
             this.NextQuestionbutton = new System.Windows.Forms.Button();
             this.MainMenuButton = new System.Windows.Forms.Button();
-            this.OptionDtextBox = new System.Windows.Forms.TextBox();
-            this.OptionCtextBox = new System.Windows.Forms.TextBox();
-            this.OptionBtextBox = new System.Windows.Forms.TextBox();
-            this.OptionAtextBox = new System.Windows.Forms.TextBox();
-            this.QuestiontextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.QuestionHeadingLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.EnterQuizIDtextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AoptionradioButton = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.BoptionRadioButton = new System.Windows.Forms.RadioButton();
+            this.CoptionRadioButton = new System.Windows.Forms.RadioButton();
+            this.DoptionRadioButton = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.CourseNametextBox = new System.Windows.Forms.TextBox();
             this.StartQuizbutton = new System.Windows.Forms.Button();
+            this.StartQuizCourseNamecomboBox = new System.Windows.Forms.ComboBox();
+            this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectDatabaseDataSet = new QuizManagementSystem.ProjectDatabaseDataSet();
+            this.teachersTableAdapter = new QuizManagementSystem.ProjectDatabaseDataSetTableAdapters.TeachersTableAdapter();
+            this.QuestionLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.MarksLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // CreateQuiz1button
             // 
             this.CreateQuiz1button.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.CreateQuiz1button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CreateQuiz1button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateQuiz1button.ForeColor = System.Drawing.Color.White;
             this.CreateQuiz1button.Location = new System.Drawing.Point(623, 461);
@@ -65,6 +73,7 @@
             // NextQuestionbutton
             // 
             this.NextQuestionbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.NextQuestionbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.NextQuestionbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextQuestionbutton.ForeColor = System.Drawing.Color.White;
             this.NextQuestionbutton.Location = new System.Drawing.Point(326, 461);
@@ -73,10 +82,12 @@
             this.NextQuestionbutton.TabIndex = 38;
             this.NextQuestionbutton.Text = "Next Question";
             this.NextQuestionbutton.UseVisualStyleBackColor = false;
+            this.NextQuestionbutton.Click += new System.EventHandler(this.NextQuestionbutton_Click);
             // 
             // MainMenuButton
             // 
             this.MainMenuButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.MainMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.MainMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuButton.ForeColor = System.Drawing.Color.White;
             this.MainMenuButton.Location = new System.Drawing.Point(31, 461);
@@ -87,63 +98,17 @@
             this.MainMenuButton.UseVisualStyleBackColor = false;
             this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
-            // OptionDtextBox
+            // QuestionHeadingLabel
             // 
-            this.OptionDtextBox.Enabled = false;
-            this.OptionDtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionDtextBox.Location = new System.Drawing.Point(560, 380);
-            this.OptionDtextBox.Name = "OptionDtextBox";
-            this.OptionDtextBox.Size = new System.Drawing.Size(303, 29);
-            this.OptionDtextBox.TabIndex = 36;
-            // 
-            // OptionCtextBox
-            // 
-            this.OptionCtextBox.Enabled = false;
-            this.OptionCtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionCtextBox.Location = new System.Drawing.Point(119, 380);
-            this.OptionCtextBox.Name = "OptionCtextBox";
-            this.OptionCtextBox.Size = new System.Drawing.Size(321, 29);
-            this.OptionCtextBox.TabIndex = 34;
-            // 
-            // OptionBtextBox
-            // 
-            this.OptionBtextBox.Enabled = false;
-            this.OptionBtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionBtextBox.Location = new System.Drawing.Point(560, 302);
-            this.OptionBtextBox.Name = "OptionBtextBox";
-            this.OptionBtextBox.Size = new System.Drawing.Size(303, 29);
-            this.OptionBtextBox.TabIndex = 32;
-            // 
-            // OptionAtextBox
-            // 
-            this.OptionAtextBox.Enabled = false;
-            this.OptionAtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionAtextBox.Location = new System.Drawing.Point(119, 302);
-            this.OptionAtextBox.Name = "OptionAtextBox";
-            this.OptionAtextBox.Size = new System.Drawing.Size(321, 29);
-            this.OptionAtextBox.TabIndex = 30;
-            // 
-            // QuestiontextBox
-            // 
-            this.QuestiontextBox.Enabled = false;
-            this.QuestiontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestiontextBox.Location = new System.Drawing.Point(48, 172);
-            this.QuestiontextBox.Multiline = true;
-            this.QuestiontextBox.Name = "QuestiontextBox";
-            this.QuestiontextBox.Size = new System.Drawing.Size(815, 87);
-            this.QuestiontextBox.TabIndex = 28;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(47, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 24);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Question";
+            this.QuestionHeadingLabel.AutoSize = true;
+            this.QuestionHeadingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.QuestionHeadingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionHeadingLabel.ForeColor = System.Drawing.Color.White;
+            this.QuestionHeadingLabel.Location = new System.Drawing.Point(47, 145);
+            this.QuestionHeadingLabel.Name = "QuestionHeadingLabel";
+            this.QuestionHeadingLabel.Size = new System.Drawing.Size(94, 24);
+            this.QuestionHeadingLabel.TabIndex = 27;
+            this.QuestionHeadingLabel.Text = "Question";
             // 
             // label2
             // 
@@ -184,53 +149,49 @@
             this.AoptionradioButton.ForeColor = System.Drawing.Color.White;
             this.AoptionradioButton.Location = new System.Drawing.Point(48, 302);
             this.AoptionradioButton.Name = "AoptionradioButton";
-            this.AoptionradioButton.Size = new System.Drawing.Size(49, 28);
+            this.AoptionradioButton.Size = new System.Drawing.Size(14, 13);
             this.AoptionradioButton.TabIndex = 40;
             this.AoptionradioButton.TabStop = true;
-            this.AoptionradioButton.Text = "A)";
             this.AoptionradioButton.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
+            // BoptionRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(480, 302);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 28);
-            this.radioButton1.TabIndex = 41;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "B)";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.BoptionRadioButton.AutoSize = true;
+            this.BoptionRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.BoptionRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoptionRadioButton.ForeColor = System.Drawing.Color.White;
+            this.BoptionRadioButton.Location = new System.Drawing.Point(480, 302);
+            this.BoptionRadioButton.Name = "BoptionRadioButton";
+            this.BoptionRadioButton.Size = new System.Drawing.Size(14, 13);
+            this.BoptionRadioButton.TabIndex = 41;
+            this.BoptionRadioButton.TabStop = true;
+            this.BoptionRadioButton.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // CoptionRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(48, 381);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(49, 28);
-            this.radioButton2.TabIndex = 42;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "C)";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.CoptionRadioButton.AutoSize = true;
+            this.CoptionRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.CoptionRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CoptionRadioButton.ForeColor = System.Drawing.Color.White;
+            this.CoptionRadioButton.Location = new System.Drawing.Point(48, 381);
+            this.CoptionRadioButton.Name = "CoptionRadioButton";
+            this.CoptionRadioButton.Size = new System.Drawing.Size(14, 13);
+            this.CoptionRadioButton.TabIndex = 42;
+            this.CoptionRadioButton.TabStop = true;
+            this.CoptionRadioButton.UseVisualStyleBackColor = false;
             // 
-            // radioButton3
+            // DoptionRadioButton
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.White;
-            this.radioButton3.Location = new System.Drawing.Point(480, 381);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(49, 28);
-            this.radioButton3.TabIndex = 43;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "D)";
-            this.radioButton3.UseVisualStyleBackColor = false;
+            this.DoptionRadioButton.AutoSize = true;
+            this.DoptionRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.DoptionRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DoptionRadioButton.ForeColor = System.Drawing.Color.White;
+            this.DoptionRadioButton.Location = new System.Drawing.Point(480, 381);
+            this.DoptionRadioButton.Name = "DoptionRadioButton";
+            this.DoptionRadioButton.Size = new System.Drawing.Size(14, 13);
+            this.DoptionRadioButton.TabIndex = 43;
+            this.DoptionRadioButton.TabStop = true;
+            this.DoptionRadioButton.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -244,26 +205,90 @@
             this.label4.TabIndex = 44;
             this.label4.Text = "Course Name";
             // 
-            // CourseNametextBox
-            // 
-            this.CourseNametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseNametextBox.Location = new System.Drawing.Point(227, 70);
-            this.CourseNametextBox.Name = "CourseNametextBox";
-            this.CourseNametextBox.Size = new System.Drawing.Size(238, 29);
-            this.CourseNametextBox.TabIndex = 45;
-            // 
             // StartQuizbutton
             // 
             this.StartQuizbutton.BackColor = System.Drawing.Color.Lime;
+            this.StartQuizbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.StartQuizbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartQuizbutton.ForeColor = System.Drawing.Color.White;
-            this.StartQuizbutton.Location = new System.Drawing.Point(738, 12);
+            this.StartQuizbutton.Location = new System.Drawing.Point(524, 24);
             this.StartQuizbutton.Name = "StartQuizbutton";
-            this.StartQuizbutton.Size = new System.Drawing.Size(141, 91);
+            this.StartQuizbutton.Size = new System.Drawing.Size(141, 79);
             this.StartQuizbutton.TabIndex = 46;
             this.StartQuizbutton.Text = "Start Quiz";
             this.StartQuizbutton.UseVisualStyleBackColor = false;
             this.StartQuizbutton.Click += new System.EventHandler(this.StartQuizbutton_Click);
+            // 
+            // StartQuizCourseNamecomboBox
+            // 
+            this.StartQuizCourseNamecomboBox.DataSource = this.teachersBindingSource;
+            this.StartQuizCourseNamecomboBox.DisplayMember = "CourseName";
+            this.StartQuizCourseNamecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartQuizCourseNamecomboBox.FormattingEnabled = true;
+            this.StartQuizCourseNamecomboBox.Location = new System.Drawing.Point(227, 71);
+            this.StartQuizCourseNamecomboBox.Name = "StartQuizCourseNamecomboBox";
+            this.StartQuizCourseNamecomboBox.Size = new System.Drawing.Size(238, 32);
+            this.StartQuizCourseNamecomboBox.TabIndex = 47;
+            // 
+            // teachersBindingSource
+            // 
+            this.teachersBindingSource.DataMember = "Teachers";
+            this.teachersBindingSource.DataSource = this.projectDatabaseDataSetBindingSource;
+            // 
+            // projectDatabaseDataSetBindingSource
+            // 
+            this.projectDatabaseDataSetBindingSource.DataSource = this.projectDatabaseDataSet;
+            this.projectDatabaseDataSetBindingSource.Position = 0;
+            // 
+            // projectDatabaseDataSet
+            // 
+            this.projectDatabaseDataSet.DataSetName = "ProjectDatabaseDataSet";
+            this.projectDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // teachersTableAdapter
+            // 
+            this.teachersTableAdapter.ClearBeforeFill = true;
+            // 
+            // QuestionLabel
+            // 
+            this.QuestionLabel.AutoSize = true;
+            this.QuestionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.QuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionLabel.ForeColor = System.Drawing.Color.White;
+            this.QuestionLabel.Location = new System.Drawing.Point(47, 188);
+            this.QuestionLabel.Name = "QuestionLabel";
+            this.QuestionLabel.Size = new System.Drawing.Size(0, 24);
+            this.QuestionLabel.TabIndex = 48;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(709, 3);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 49;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(705, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 24);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "Marks";
+            // 
+            // MarksLabel
+            // 
+            this.MarksLabel.AutoSize = true;
+            this.MarksLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MarksLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MarksLabel.ForeColor = System.Drawing.Color.White;
+            this.MarksLabel.Location = new System.Drawing.Point(796, 42);
+            this.MarksLabel.Name = "MarksLabel";
+            this.MarksLabel.Size = new System.Drawing.Size(0, 24);
+            this.MarksLabel.TabIndex = 51;
             // 
             // StartQuizForm
             // 
@@ -273,28 +298,31 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.MarksLabel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.QuestionLabel);
+            this.Controls.Add(this.StartQuizCourseNamecomboBox);
             this.Controls.Add(this.StartQuizbutton);
-            this.Controls.Add(this.CourseNametextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.DoptionRadioButton);
+            this.Controls.Add(this.CoptionRadioButton);
+            this.Controls.Add(this.BoptionRadioButton);
             this.Controls.Add(this.AoptionradioButton);
             this.Controls.Add(this.CreateQuiz1button);
             this.Controls.Add(this.NextQuestionbutton);
             this.Controls.Add(this.MainMenuButton);
-            this.Controls.Add(this.OptionDtextBox);
-            this.Controls.Add(this.OptionCtextBox);
-            this.Controls.Add(this.OptionBtextBox);
-            this.Controls.Add(this.OptionAtextBox);
-            this.Controls.Add(this.QuestiontextBox);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.QuestionHeadingLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EnterQuizIDtextBox);
             this.Controls.Add(this.label1);
             this.Name = "StartQuizForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartQuizForm";
+            this.Load += new System.EventHandler(this.StartQuizForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,21 +332,24 @@
         private System.Windows.Forms.Button CreateQuiz1button;
         private System.Windows.Forms.Button NextQuestionbutton;
         private System.Windows.Forms.Button MainMenuButton;
-        private System.Windows.Forms.TextBox OptionDtextBox;
-        private System.Windows.Forms.TextBox OptionCtextBox;
-        private System.Windows.Forms.TextBox OptionBtextBox;
-        private System.Windows.Forms.TextBox OptionAtextBox;
-        private System.Windows.Forms.TextBox QuestiontextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label QuestionHeadingLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox EnterQuizIDtextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton AoptionradioButton;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton BoptionRadioButton;
+        private System.Windows.Forms.RadioButton CoptionRadioButton;
+        private System.Windows.Forms.RadioButton DoptionRadioButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox CourseNametextBox;
         private System.Windows.Forms.Button StartQuizbutton;
+        private System.Windows.Forms.ComboBox StartQuizCourseNamecomboBox;
+        private System.Windows.Forms.BindingSource projectDatabaseDataSetBindingSource;
+        private ProjectDatabaseDataSet projectDatabaseDataSet;
+        private System.Windows.Forms.BindingSource teachersBindingSource;
+        private ProjectDatabaseDataSetTableAdapters.TeachersTableAdapter teachersTableAdapter;
+        private System.Windows.Forms.Label QuestionLabel;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label MarksLabel;
     }
 }

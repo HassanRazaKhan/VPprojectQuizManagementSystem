@@ -94,8 +94,28 @@ namespace QuizManagementSystem
             
         }
 
-       
-          
-        
+        private void Exitbutton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void UsernametextBox_Enter(object sender, EventArgs e)
+        {
+            if(UsernametextBox.Text=="Username")
+            {
+                UsernametextBox.Text = "";
+                UsernametextBox.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void UsernametextBox_Leave(object sender, EventArgs e)
+        {
+            if (UsernametextBox.Text == "")
+            {
+                UsernametextBox.Text = "Username";
+                UsernametextBox.ForeColor = Color.Gray;
+            }
+        }
     }
 }

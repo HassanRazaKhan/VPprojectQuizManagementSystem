@@ -68,10 +68,14 @@
             // SignupDepartmenttextBox
             // 
             this.SignupDepartmenttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupDepartmenttextBox.ForeColor = System.Drawing.Color.Gray;
             this.SignupDepartmenttextBox.Location = new System.Drawing.Point(302, 262);
             this.SignupDepartmenttextBox.Name = "SignupDepartmenttextBox";
             this.SignupDepartmenttextBox.Size = new System.Drawing.Size(405, 29);
             this.SignupDepartmenttextBox.TabIndex = 6;
+            this.SignupDepartmenttextBox.Text = "e.g. : Software Engineering";
+            this.SignupDepartmenttextBox.Enter += new System.EventHandler(this.SignupDepartmenttextBox_Enter);
+            this.SignupDepartmenttextBox.Leave += new System.EventHandler(this.SignupDepartmenttextBox_Leave);
             // 
             // label2
             // 
@@ -88,10 +92,14 @@
             // SignupEmailtextBox
             // 
             this.SignupEmailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupEmailtextBox.ForeColor = System.Drawing.Color.Gray;
             this.SignupEmailtextBox.Location = new System.Drawing.Point(302, 209);
             this.SignupEmailtextBox.Name = "SignupEmailtextBox";
             this.SignupEmailtextBox.Size = new System.Drawing.Size(405, 29);
             this.SignupEmailtextBox.TabIndex = 10;
+            this.SignupEmailtextBox.Text = "someone@gmail.com";
+            this.SignupEmailtextBox.Enter += new System.EventHandler(this.SignupEmailtextBox_Enter);
+            this.SignupEmailtextBox.Leave += new System.EventHandler(this.SignupEmailtextBox_Leave);
             // 
             // label4
             // 
@@ -128,6 +136,7 @@
             // SignUpbutton
             // 
             this.SignUpbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.SignUpbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpbutton.ForeColor = System.Drawing.Color.White;
             this.SignUpbutton.Location = new System.Drawing.Point(540, 391);

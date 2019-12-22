@@ -38,6 +38,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TeacherLoginradioButton = new System.Windows.Forms.RadioButton();
             this.StudentLoginradioButton = new System.Windows.Forms.RadioButton();
+            this.Exitbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -45,15 +46,20 @@
             // UsernametextBox
             // 
             this.UsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernametextBox.ForeColor = System.Drawing.Color.Gray;
             this.UsernametextBox.Location = new System.Drawing.Point(112, 60);
             this.UsernametextBox.Name = "UsernametextBox";
             this.UsernametextBox.Size = new System.Drawing.Size(211, 29);
             this.UsernametextBox.TabIndex = 2;
+            this.UsernametextBox.Text = "Username";
             this.UsernametextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UsernametextBox.Enter += new System.EventHandler(this.UsernametextBox_Enter);
+            this.UsernametextBox.Leave += new System.EventHandler(this.UsernametextBox_Leave);
             // 
             // PasswardtextBox
             // 
             this.PasswardtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswardtextBox.ForeColor = System.Drawing.Color.Black;
             this.PasswardtextBox.Location = new System.Drawing.Point(112, 122);
             this.PasswardtextBox.Name = "PasswardtextBox";
             this.PasswardtextBox.PasswordChar = '*';
@@ -76,11 +82,12 @@
             // SignInbutton
             // 
             this.SignInbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.SignInbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SignInbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInbutton.ForeColor = System.Drawing.Color.White;
-            this.SignInbutton.Location = new System.Drawing.Point(47, 292);
+            this.SignInbutton.Location = new System.Drawing.Point(83, 292);
             this.SignInbutton.Name = "SignInbutton";
-            this.SignInbutton.Size = new System.Drawing.Size(298, 35);
+            this.SignInbutton.Size = new System.Drawing.Size(240, 35);
             this.SignInbutton.TabIndex = 6;
             this.SignInbutton.Text = "Sign In";
             this.SignInbutton.UseVisualStyleBackColor = false;
@@ -92,7 +99,7 @@
             this.SignUplinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.SignUplinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUplinkLabel.LinkColor = System.Drawing.Color.White;
-            this.SignUplinkLabel.Location = new System.Drawing.Point(131, 352);
+            this.SignUplinkLabel.Location = new System.Drawing.Point(135, 341);
             this.SignUplinkLabel.Name = "SignUplinkLabel";
             this.SignUplinkLabel.Size = new System.Drawing.Size(132, 16);
             this.SignUplinkLabel.TabIndex = 7;
@@ -148,6 +155,20 @@
             this.StudentLoginradioButton.Text = "Student";
             this.StudentLoginradioButton.UseVisualStyleBackColor = false;
             // 
+            // Exitbutton
+            // 
+            this.Exitbutton.BackColor = System.Drawing.Color.Crimson;
+            this.Exitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Exitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exitbutton.ForeColor = System.Drawing.Color.White;
+            this.Exitbutton.Location = new System.Drawing.Point(291, 383);
+            this.Exitbutton.Name = "Exitbutton";
+            this.Exitbutton.Size = new System.Drawing.Size(86, 33);
+            this.Exitbutton.TabIndex = 25;
+            this.Exitbutton.Text = "Exit";
+            this.Exitbutton.UseVisualStyleBackColor = false;
+            this.Exitbutton.Click += new System.EventHandler(this.Exitbutton_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +177,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(389, 428);
             this.ControlBox = false;
+            this.Controls.Add(this.Exitbutton);
             this.Controls.Add(this.TeacherLoginradioButton);
             this.Controls.Add(this.StudentLoginradioButton);
             this.Controls.Add(this.pictureBox2);
@@ -185,5 +207,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.RadioButton TeacherLoginradioButton;
         private System.Windows.Forms.RadioButton StudentLoginradioButton;
+        private System.Windows.Forms.Button Exitbutton;
     }
 }
