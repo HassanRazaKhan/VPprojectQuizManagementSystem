@@ -68,7 +68,7 @@
             this.SearchStudenttextBox.ForeColor = System.Drawing.Color.Gray;
             this.SearchStudenttextBox.Location = new System.Drawing.Point(311, 39);
             this.SearchStudenttextBox.Name = "SearchStudenttextBox";
-            this.SearchStudenttextBox.Size = new System.Drawing.Size(322, 29);
+            this.SearchStudenttextBox.Size = new System.Drawing.Size(344, 29);
             this.SearchStudenttextBox.TabIndex = 23;
             this.SearchStudenttextBox.Text = "Search By Username";
             this.SearchStudenttextBox.Enter += new System.EventHandler(this.SearchStudenttextBox_Enter);
@@ -92,9 +92,9 @@
             // 
             this.SearchStudentpictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchStudentpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SearchStudentpictureBox.Image")));
-            this.SearchStudentpictureBox.Location = new System.Drawing.Point(615, 39);
+            this.SearchStudentpictureBox.Location = new System.Drawing.Point(625, 39);
             this.SearchStudentpictureBox.Name = "SearchStudentpictureBox";
-            this.SearchStudentpictureBox.Size = new System.Drawing.Size(40, 29);
+            this.SearchStudentpictureBox.Size = new System.Drawing.Size(30, 29);
             this.SearchStudentpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SearchStudentpictureBox.TabIndex = 27;
             this.SearchStudentpictureBox.TabStop = false;

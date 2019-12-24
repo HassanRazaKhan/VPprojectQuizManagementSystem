@@ -43,6 +43,7 @@
             this.TeacherSignupradioButton = new System.Windows.Forms.RadioButton();
             this.TeacherSignupCourseNametextBox = new System.Windows.Forms.TextBox();
             this.CourseNamelabel = new System.Windows.Forms.Label();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SignupUsernametextBox
@@ -209,6 +210,20 @@
             this.CourseNamelabel.TabIndex = 18;
             this.CourseNamelabel.Text = "Course Name";
             // 
+            // Backbutton
+            // 
+            this.Backbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Backbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbutton.ForeColor = System.Drawing.Color.White;
+            this.Backbutton.Location = new System.Drawing.Point(12, 391);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(256, 35);
+            this.Backbutton.TabIndex = 19;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = false;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +231,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(808, 450);
+            this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.CourseNamelabel);
             this.Controls.Add(this.TeacherSignupCourseNametextBox);
             this.Controls.Add(this.TeacherSignupradioButton);
@@ -255,5 +271,6 @@
         private System.Windows.Forms.RadioButton TeacherSignupradioButton;
         private System.Windows.Forms.TextBox TeacherSignupCourseNametextBox;
         private System.Windows.Forms.Label CourseNamelabel;
+        private System.Windows.Forms.Button Backbutton;
     }
 }

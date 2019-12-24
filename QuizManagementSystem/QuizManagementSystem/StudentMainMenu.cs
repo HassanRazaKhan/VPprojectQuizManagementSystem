@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 
 namespace QuizManagementSystem
 {
@@ -18,48 +19,96 @@ namespace QuizManagementSystem
             InitializeComponent();
         }
 
-        private void StudentSignOutbutton_Click(object sender, EventArgs e)
-        {
+       
+       
 
-            LoginForm lf = new LoginForm();
+        private void label13_Click(object sender, EventArgs e)
+        {
+            StartQuizForm sqf = new StartQuizForm();
             this.Hide();
-            lf.Show();
+            sqf.Show();
         }
 
-        private void StudentEditRecordbutton_Click(object sender, EventArgs e)
+        private void ViewTeacherspictureBox_Click(object sender, EventArgs e)
         {
-            StudentEditRecordForm ser = new StudentEditRecordForm();
+
+            ViewTeachersForm vtf = new ViewTeachersForm();
             this.Hide();
-            ser.Show();
+            vtf.Show();
         }
 
-        private void StudentViewResultsbutton_Click(object sender, EventArgs e)
+        private void StartQuizpictureBox_Click(object sender, EventArgs e)
         {
-            StudentViewResults svr = new StudentViewResults();
+            StartQuizForm sqf = new StartQuizForm();
             this.Hide();
-            svr.Show();
+            sqf.Show();
         }
 
-        private void StudentViewCoursesbutton_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+            ViewTeachersForm vtf = new ViewTeachersForm();
+            this.Hide();
+            vtf.Show();
+        }
+
+        private void StudentsViewCoursespictureBox_Click(object sender, EventArgs e)
         {
             StudentViewCourses svc = new StudentViewCourses();
             this.Hide();
             svc.Show();
         }
 
-        private void ViewTeachersbutton_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            ViewTeachersForm vtf = new ViewTeachersForm();
+            StudentViewCourses svc = new StudentViewCourses();
             this.Hide();
-            vtf.Show();
+            svc.Show();
         }
 
-        private void StartQuizbutton_Click(object sender, EventArgs e)
+        private void StudentsViewResultspictureBox_Click(object sender, EventArgs e)
         {
-            StartQuizForm sqf = new StartQuizForm();
+            StudentViewResults svr = new StudentViewResults();
             this.Hide();
-            sqf.Show();
+            svr.Show();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            StudentViewResults svr = new StudentViewResults();
+            this.Hide();
+            svr.Show();
+        }
+
+        private void StudentsEditRecordspictureBox_Click(object sender, EventArgs e)
+        {
+            StudentEditRecordForm ser = new StudentEditRecordForm();
+            this.Hide();
+            ser.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            StudentEditRecordForm ser = new StudentEditRecordForm();
+            this.Hide();
+            ser.Show();
+        }
+
+        private void StudentsSignOutpictureBox_Click(object sender, EventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            this.Hide();
+            lf.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            this.Hide();
+            lf.Show();
+        }
+        
+      
     }
 }
 

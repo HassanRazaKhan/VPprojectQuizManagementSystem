@@ -15,54 +15,93 @@ namespace QuizManagementSystem
         public TeacherMainMenu()
         {
             InitializeComponent();
+          
         }
 
-        private void CreateQuizbutton_Click(object sender, EventArgs e)
+      
+
+        private void CreateQuizpictureBox_Click(object sender, EventArgs e)
         {
             CreateQuizForm cqf = new CreateQuizForm();
             this.Hide();
             cqf.Show();
         }
 
-        private void ViewStudentsbutton_Click(object sender, EventArgs e)
+        private void label13_Click(object sender, EventArgs e)
+        {
+            CreateQuizForm cqf = new CreateQuizForm();
+            this.Hide();
+            cqf.Show();
+        }
+
+        private void ViewStudentspictureBox_Click(object sender, EventArgs e)
         {
             ViewStudentsForm vs = new ViewStudentsForm();
             this.Hide();
             vs.Show();
         }
 
-        private void TeacherViewCoursesbutton_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ViewStudentsForm vs = new ViewStudentsForm();
+            this.Hide();
+            vs.Show();
+        }
+
+        private void ViewCoursespictureBox_Click(object sender, EventArgs e)
         {
             TeacherViewCourses tvc = new TeacherViewCourses();
             this.Hide();
             tvc.Show();
-
         }
 
-        private void TeacherViewResultsbutton_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+            TeacherViewCourses tvc = new TeacherViewCourses();
+            this.Hide();
+            tvc.Show();
+        }
+
+        private void ViewResultspictureBox_Click(object sender, EventArgs e)
         {
             TeacherViewResults tvr = new TeacherViewResults();
             this.Hide();
             tvr.Show();
         }
 
-        private void TeacherEditRecordbutton_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
+        {
+            TeacherViewResults tvr = new TeacherViewResults();
+            this.Hide();
+            tvr.Show();
+        }
+
+        private void TeacherEditRecordspictureBox_Click(object sender, EventArgs e)
         {
             TeacherEditRecords ter = new TeacherEditRecords();
             this.Hide();
             ter.Show();
         }
 
-        private void TeacherSignOutbutton_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
+        {
+            TeacherEditRecords ter = new TeacherEditRecords();
+            this.Hide();
+            ter.Show();
+        }
+
+        private void TeacherSignOutpictureBox_Click(object sender, EventArgs e)
         {
             LoginForm lf = new LoginForm();
             this.Hide();
             lf.Show();
         }
 
-        private void TeacherMainMenu_Load(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
-
+            LoginForm lf = new LoginForm();
+            this.Hide();
+            lf.Show();
         }
     }
 }

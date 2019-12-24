@@ -73,9 +73,9 @@
             this.SearchStudentsCourseButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchStudentsCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchStudentsCourseButton.ForeColor = System.Drawing.Color.White;
-            this.SearchStudentsCourseButton.Location = new System.Drawing.Point(721, 49);
+            this.SearchStudentsCourseButton.Location = new System.Drawing.Point(690, 48);
             this.SearchStudentsCourseButton.Name = "SearchStudentsCourseButton";
-            this.SearchStudentsCourseButton.Size = new System.Drawing.Size(113, 37);
+            this.SearchStudentsCourseButton.Size = new System.Drawing.Size(113, 39);
             this.SearchStudentsCourseButton.TabIndex = 53;
             this.SearchStudentsCourseButton.Text = "Search";
             this.SearchStudentsCourseButton.UseVisualStyleBackColor = false;

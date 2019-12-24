@@ -58,9 +58,7 @@ namespace QuizManagementSystem
 
         private void NextQuestionbutton_Click(object sender, EventArgs e)
         {
-            CreateQuizForm cqf = new CreateQuizForm();
-            this.Hide();
-            cqf.Show();
+            
 
         }
     }

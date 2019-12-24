@@ -117,5 +117,16 @@ namespace QuizManagementSystem
                 UsernametextBox.ForeColor = Color.Gray;
             }
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            Loginpanel.Visible = true;
+            Loginpanel.BackColor = Color.FromArgb(100, 100, 100, 100);
+        }
+
+        private void Loginpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

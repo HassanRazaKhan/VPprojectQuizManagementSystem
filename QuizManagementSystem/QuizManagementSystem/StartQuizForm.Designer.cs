@@ -102,9 +102,9 @@
             // 
             this.QuestionHeadingLabel.AutoSize = true;
             this.QuestionHeadingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.QuestionHeadingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionHeadingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionHeadingLabel.ForeColor = System.Drawing.Color.White;
-            this.QuestionHeadingLabel.Location = new System.Drawing.Point(47, 145);
+            this.QuestionHeadingLabel.Location = new System.Drawing.Point(47, 123);
             this.QuestionHeadingLabel.Name = "QuestionHeadingLabel";
             this.QuestionHeadingLabel.Size = new System.Drawing.Size(94, 24);
             this.QuestionHeadingLabel.TabIndex = 27;
@@ -211,9 +211,9 @@
             this.StartQuizbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.StartQuizbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartQuizbutton.ForeColor = System.Drawing.Color.White;
-            this.StartQuizbutton.Location = new System.Drawing.Point(524, 24);
+            this.StartQuizbutton.Location = new System.Drawing.Point(521, 24);
             this.StartQuizbutton.Name = "StartQuizbutton";
-            this.StartQuizbutton.Size = new System.Drawing.Size(141, 79);
+            this.StartQuizbutton.Size = new System.Drawing.Size(144, 79);
             this.StartQuizbutton.TabIndex = 46;
             this.StartQuizbutton.Text = "Start Quiz";
             this.StartQuizbutton.UseVisualStyleBackColor = false;

@@ -93,9 +93,9 @@
             // 
             this.SearchTeacherstpictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchTeacherstpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SearchTeacherstpictureBox.Image")));
-            this.SearchTeacherstpictureBox.Location = new System.Drawing.Point(602, 53);
+            this.SearchTeacherstpictureBox.Location = new System.Drawing.Point(610, 53);
             this.SearchTeacherstpictureBox.Name = "SearchTeacherstpictureBox";
-            this.SearchTeacherstpictureBox.Size = new System.Drawing.Size(40, 29);
+            this.SearchTeacherstpictureBox.Size = new System.Drawing.Size(32, 29);
             this.SearchTeacherstpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SearchTeacherstpictureBox.TabIndex = 44;
             this.SearchTeacherstpictureBox.TabStop = false;

@@ -12,11 +12,14 @@ using System.Data.SqlTypes;
 
 namespace QuizManagementSystem
 {
+    
     public partial class StartQuizForm : Form
     {
+        private int nextQs;
         public StartQuizForm()
         {
             InitializeComponent();
+            
         }
 
         private void MainMenuButton_Click(object sender, EventArgs e)
@@ -27,6 +30,7 @@ namespace QuizManagementSystem
         }
         private void StartQuizForm_Load(object sender, EventArgs e)
         {
+            
             // TODO: This line of code loads data into the 'projectDatabaseDataSet.Teachers' table. You can move, or remove it, as needed.
             this.teachersTableAdapter.Fill(this.projectDatabaseDataSet.Teachers);
             QuestionHeadingLabel.Visible = false;
@@ -43,45 +47,18 @@ namespace QuizManagementSystem
             {
                 try
                 {
-                    SqlCommand cmd = new SqlCommand();
-                    Connection obj = new Connection();
-                    obj.con.ConnectionString = obj.locate;
-
-                    SqlConnection myconn;
-                    SqlCommand sqlCmd;
-                  
-                     query=("Select * FROM Questions where QuizId ='" + EnterQuizIDtextBox.Text + "' and CourseName ='" + StartQuizCourseNamecomboBox.Text.ToString() + "'");
-              
-                   myconn = new SqlConnection(obj.locate);
-                    sqlCmd = new SqlCommand(query, myconn);
-                    DataTable dt = new DataTable();
-                    myconn.Open();
-                    
-                   
-                    using (SqlDataReader dr = sqlCmd.ExecuteReader())
-                    { 
-                       
-                        
-                        while(dr.Read())
-                        {
-                            QuestionHeadingLabel.Visible = true;
-                            QuestionLabel.Visible = true;
-                            AoptionradioButton.Visible = true;
-                            BoptionRadioButton.Visible = true;
-                            CoptionRadioButton.Visible = true;
-                            DoptionRadioButton.Visible = true;
-                            QuestionLabel.Text =dr.GetString(2);
-                            AoptionradioButton.Text = dr.GetString(3);
-                            BoptionRadioButton.Text = dr.GetString(4);
-                            CoptionRadioButton.Text = dr.GetString(5);
-                            DoptionRadioButton.Text = dr.GetString(6);
-                        
-                      }
-                        dr.Close();
-                    }
-                   
-                    myconn.Close();
-
+                    QuestionLabel.Text = "";
+                    AoptionradioButton.Text = "";
+                    BoptionRadioButton.Text = "";
+                    CoptionRadioButton.Text = "";
+                    DoptionRadioButton.Text = "";
+                    this.nextQs = Convert.ToInt32(this.EnterQuizIDtextBox.Text);
+                    showQuestions(false);
+                    this.EnterQuizIDtextBox.Visible = false;
+                    this.StartQuizCourseNamecomboBox.Visible = false;
+                    this.StartQuizbutton.Visible = false;
+                    this.label1.Text = "Quiz ID: " + this.EnterQuizIDtextBox.Text;
+                    this.label4.Text = "Course Name: " + this.StartQuizCourseNamecomboBox.Text;
                 }
                 catch (Exception ex)
                 {
@@ -94,7 +71,51 @@ namespace QuizManagementSystem
             }
         }
 
-       
+       private  void showQuestions(bool flag)
+        {
+
+            SqlCommand cmd = new SqlCommand();
+            Connection obj = new Connection();
+            obj.con.ConnectionString = obj.locate;
+
+            SqlConnection myconn;
+            SqlCommand sqlCmd;
+            if(flag==false)
+              query = ("Select * FROM Questions where QuizId ='" + Convert.ToString(this.nextQs) + "' and CourseName ='" + StartQuizCourseNamecomboBox.Text.ToString() + "'");
+            else
+                query = ("Select * FROM Questions where QuizId >'" + Convert.ToString(this.nextQs) + "' and CourseName ='" + StartQuizCourseNamecomboBox.Text.ToString() + "'");
+            myconn = new SqlConnection(obj.locate);
+            sqlCmd = new SqlCommand(query, myconn);
+            DataTable dt = new DataTable();
+            this.EnterQuizIDtextBox.Text = Convert.ToString(this.nextQs);
+            myconn.Open();
+
+            
+            using (SqlDataReader dr = sqlCmd.ExecuteReader())
+            {
+
+
+                while (dr.Read())
+                {
+                    
+                    QuestionHeadingLabel.Visible = true;
+                    QuestionLabel.Visible = true;
+                    AoptionradioButton.Visible = true;
+                    BoptionRadioButton.Visible = true;
+                    CoptionRadioButton.Visible = true;
+                    DoptionRadioButton.Visible = true;
+                    QuestionLabel.Text = dr.GetString(2);
+                    AoptionradioButton.Text = dr.GetString(3);
+                    BoptionRadioButton.Text = dr.GetString(4);
+                    CoptionRadioButton.Text = dr.GetString(5);
+                    DoptionRadioButton.Text = dr.GetString(6);
+
+                }
+                dr.Close();
+            }
+
+            myconn.Close();
+        }
 
         private void NextQuestionbutton_Click(object sender, EventArgs e)
         {
@@ -102,45 +123,13 @@ namespace QuizManagementSystem
             {
                 try
                 {
-                    SqlCommand cmd = new SqlCommand();
-                    Connection obj = new Connection();
-                    obj.con.ConnectionString = obj.locate;
-
-                    SqlConnection myconn;
-                    SqlCommand sqlCmd;
-
-                     query = ("Select * FROM Questions where QuizId ='" + EnterQuizIDtextBox.Text + "' and CourseName ='" + StartQuizCourseNamecomboBox.Text.ToString() + "'where QuizId >'" + query + "'");
-
-                    myconn = new SqlConnection(obj.locate);
-                    sqlCmd = new SqlCommand(query, myconn);
-                    DataTable dt = new DataTable();
-                    myconn.Open();
-
-
-                    using (SqlDataReader dr = sqlCmd.ExecuteReader())
-                    {
-
-
-                        while (dr.Read())
-                        {
-                            QuestionHeadingLabel.Visible = true;
-                            QuestionLabel.Visible = true;
-                            AoptionradioButton.Visible = true;
-                            BoptionRadioButton.Visible = true;
-                            CoptionRadioButton.Visible = true;
-                            DoptionRadioButton.Visible = true;
-                            QuestionLabel.Text = dr.GetString(2);
-                            AoptionradioButton.Text = dr.GetString(3);
-                            BoptionRadioButton.Text = dr.GetString(4);
-                            CoptionRadioButton.Text = dr.GetString(5);
-                            DoptionRadioButton.Text = dr.GetString(6);
-
-                        }
-                        dr.Close();
-                    }
-
-                    myconn.Close();
-
+                    QuestionLabel.Text = "";
+                    AoptionradioButton.Text = "";
+                    BoptionRadioButton.Text = "";
+                    CoptionRadioButton.Text = "";
+                    DoptionRadioButton.Text = "";
+                    this.nextQs += 1;
+                    showQuestions(true);
                 }
                 catch (Exception ex)
                 {
