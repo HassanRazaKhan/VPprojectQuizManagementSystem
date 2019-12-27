@@ -69,6 +69,7 @@
             this.CreateQuiz1button.TabIndex = 39;
             this.CreateQuiz1button.Text = "Sumbit Quiz";
             this.CreateQuiz1button.UseVisualStyleBackColor = false;
+            this.CreateQuiz1button.Click += new System.EventHandler(this.CreateQuiz1button_Click);
             // 
             // NextQuestionbutton
             // 

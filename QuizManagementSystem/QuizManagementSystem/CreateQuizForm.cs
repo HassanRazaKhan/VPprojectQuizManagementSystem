@@ -13,6 +13,8 @@ namespace QuizManagementSystem
 {
     public partial class CreateQuizForm : Form
     {
+        int quizid = 0;
+        private int nextQs;
         public CreateQuizForm()
         {
             InitializeComponent();
@@ -52,14 +54,43 @@ namespace QuizManagementSystem
         {
             // TODO: This line of code loads data into the 'projectDatabaseDataSet.Teachers' table. You can move, or remove it, as needed.
             this.teachersTableAdapter.Fill(this.projectDatabaseDataSet.Teachers);
-          
+
 
         }
 
+
+
         private void NextQuestionbutton_Click(object sender, EventArgs e)
         {
-            
 
+
+            if (QuizIDtextBox.Text != null && CourseNamecomboBox.Text.ToString() != null && AddQuestiontextBox.Text != null && OptionAtextBox.Text != null && OptionCtextBox.Text != null && OptionDtextBox.Text != null && CorrectAnswertextBox.Text != null)
+            {
+                try
+                {
+                    Connection obj = new Connection();
+                    obj.con.ConnectionString = obj.locate;
+                    obj.con.Open();
+                    string insertUser = "insert into Questions values ('" + QuizIDtextBox.Text + "','" + CourseNamecomboBox.Text.ToString() + "','" + AddQuestiontextBox.Text + "','" + OptionAtextBox.Text + "','" + OptionBtextBox.Text + "','" + OptionCtextBox.Text + "','" + OptionDtextBox.Text + "','" + CorrectAnswertextBox.Text + "')";
+                    obj.cmd.Connection = obj.con;
+                    obj.cmd.CommandText = insertUser;
+                    obj.cmd.ExecuteNonQuery();
+                    obj.con.Close();
+                    MessageBox.Show("Quiz Created Successfully");
+                    QuizIDtextBox.Text = "";
+                    CourseNamecomboBox.Text = "";
+                    AddQuestiontextBox.Text = "";
+                    OptionAtextBox.Text = "";
+                    OptionBtextBox.Text = "";
+                    OptionCtextBox.Text = "";
+                    OptionDtextBox.Text = "";
+                    CorrectAnswertextBox.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error" + ex);
+                }
+            }
         }
     }
 }

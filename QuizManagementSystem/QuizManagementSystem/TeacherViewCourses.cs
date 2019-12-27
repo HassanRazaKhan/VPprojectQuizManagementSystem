@@ -40,7 +40,9 @@ namespace QuizManagementSystem
             tmm.Show();
         }
 
-        private void SearchTeacherCourseButton_Click(object sender, EventArgs e)
+       
+
+        private void SearchTeachersCoursespictureBox_Click(object sender, EventArgs e)
         {
             Connection obj = new Connection();
             obj.con.ConnectionString = obj.locate;

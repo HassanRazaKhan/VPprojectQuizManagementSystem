@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherViewCourses));
             this.MainMenuButton = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.SearchTeacherCourseButton = new System.Windows.Forms.Button();
             this.SearchTeacherCoursetextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.viewTeacherCoursetsdataGridView = new System.Windows.Forms.DataGridView();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.SearchTeachersCoursespictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.viewTeacherCoursetsdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchTeachersCoursespictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenuButton
@@ -60,20 +61,6 @@
             this.vScrollBar1.Size = new System.Drawing.Size(17, 316);
             this.vScrollBar1.TabIndex = 48;
             // 
-            // SearchTeacherCourseButton
-            // 
-            this.SearchTeacherCourseButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.SearchTeacherCourseButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SearchTeacherCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTeacherCourseButton.ForeColor = System.Drawing.Color.White;
-            this.SearchTeacherCourseButton.Location = new System.Drawing.Point(721, 65);
-            this.SearchTeacherCourseButton.Name = "SearchTeacherCourseButton";
-            this.SearchTeacherCourseButton.Size = new System.Drawing.Size(113, 37);
-            this.SearchTeacherCourseButton.TabIndex = 47;
-            this.SearchTeacherCourseButton.Text = "Search";
-            this.SearchTeacherCourseButton.UseVisualStyleBackColor = false;
-            this.SearchTeacherCourseButton.Click += new System.EventHandler(this.SearchTeacherCourseButton_Click);
-            // 
             // SearchTeacherCoursetextBox
             // 
             this.SearchTeacherCoursetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,7 +75,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(77, 71);
+            this.label1.Location = new System.Drawing.Point(260, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 24);
             this.label1.TabIndex = 45;
@@ -110,6 +97,18 @@
             this.hScrollBar1.Size = new System.Drawing.Size(344, 17);
             this.hScrollBar1.TabIndex = 49;
             // 
+            // SearchTeachersCoursespictureBox
+            // 
+            this.SearchTeachersCoursespictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchTeachersCoursespictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SearchTeachersCoursespictureBox.Image")));
+            this.SearchTeachersCoursespictureBox.Location = new System.Drawing.Point(639, 68);
+            this.SearchTeachersCoursespictureBox.Name = "SearchTeachersCoursespictureBox";
+            this.SearchTeachersCoursespictureBox.Size = new System.Drawing.Size(30, 29);
+            this.SearchTeachersCoursespictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SearchTeachersCoursespictureBox.TabIndex = 57;
+            this.SearchTeachersCoursespictureBox.TabStop = false;
+            this.SearchTeachersCoursespictureBox.Click += new System.EventHandler(this.SearchTeachersCoursespictureBox_Click);
+            // 
             // TeacherViewCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,9 +116,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
+            this.Controls.Add(this.SearchTeachersCoursespictureBox);
             this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.SearchTeacherCourseButton);
             this.Controls.Add(this.SearchTeacherCoursetextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewTeacherCoursetsdataGridView);
@@ -128,6 +127,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherViewCourses";
             ((System.ComponentModel.ISupportInitialize)(this.viewTeacherCoursetsdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchTeachersCoursespictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,10 +137,10 @@
 
         private System.Windows.Forms.Button MainMenuButton;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.Button SearchTeacherCourseButton;
         private System.Windows.Forms.TextBox SearchTeacherCoursetextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView viewTeacherCoursetsdataGridView;
         private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.PictureBox SearchTeachersCoursespictureBox;
     }
 }

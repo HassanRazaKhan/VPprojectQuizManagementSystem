@@ -32,11 +32,12 @@
             this.MainMenuButton = new System.Windows.Forms.Button();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.SearchStudentsCourseButton = new System.Windows.Forms.Button();
             this.SearchStudentsCoursetextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.viewStudentsCoursetsdataGridView = new System.Windows.Forms.DataGridView();
+            this.SearchStudentCoursespictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.viewStudentsCoursetsdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchStudentCoursespictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenuButton
@@ -67,20 +68,6 @@
             this.vScrollBar1.Size = new System.Drawing.Size(17, 316);
             this.vScrollBar1.TabIndex = 54;
             // 
-            // SearchStudentsCourseButton
-            // 
-            this.SearchStudentsCourseButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.SearchStudentsCourseButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SearchStudentsCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchStudentsCourseButton.ForeColor = System.Drawing.Color.White;
-            this.SearchStudentsCourseButton.Location = new System.Drawing.Point(690, 48);
-            this.SearchStudentsCourseButton.Name = "SearchStudentsCourseButton";
-            this.SearchStudentsCourseButton.Size = new System.Drawing.Size(113, 39);
-            this.SearchStudentsCourseButton.TabIndex = 53;
-            this.SearchStudentsCourseButton.Text = "Search";
-            this.SearchStudentsCourseButton.UseVisualStyleBackColor = false;
-            this.SearchStudentsCourseButton.Click += new System.EventHandler(this.SearchTeacherCourseButton_Click);
-            // 
             // SearchStudentsCoursetextBox
             // 
             this.SearchStudentsCoursetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,7 +82,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(77, 55);
+            this.label1.Location = new System.Drawing.Point(260, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 24);
             this.label1.TabIndex = 51;
@@ -110,6 +97,18 @@
             this.viewStudentsCoursetsdataGridView.Size = new System.Drawing.Size(344, 333);
             this.viewStudentsCoursetsdataGridView.TabIndex = 50;
             // 
+            // SearchStudentCoursespictureBox
+            // 
+            this.SearchStudentCoursespictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchStudentCoursespictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SearchStudentCoursespictureBox.Image")));
+            this.SearchStudentCoursespictureBox.Location = new System.Drawing.Point(639, 52);
+            this.SearchStudentCoursespictureBox.Name = "SearchStudentCoursespictureBox";
+            this.SearchStudentCoursespictureBox.Size = new System.Drawing.Size(30, 29);
+            this.SearchStudentCoursespictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SearchStudentCoursespictureBox.TabIndex = 56;
+            this.SearchStudentCoursespictureBox.TabStop = false;
+            this.SearchStudentCoursespictureBox.Click += new System.EventHandler(this.SearchStudentCoursespictureBox_Click);
+            // 
             // StudentViewCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,9 +117,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.SearchStudentCoursespictureBox);
             this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.SearchStudentsCourseButton);
             this.Controls.Add(this.SearchStudentsCoursetextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewStudentsCoursetsdataGridView);
@@ -129,6 +128,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentViewCourses";
             ((System.ComponentModel.ISupportInitialize)(this.viewStudentsCoursetsdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchStudentCoursespictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,9 +139,9 @@
         private System.Windows.Forms.Button MainMenuButton;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.Button SearchStudentsCourseButton;
         private System.Windows.Forms.TextBox SearchStudentsCoursetextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView viewStudentsCoursetsdataGridView;
+        private System.Windows.Forms.PictureBox SearchStudentCoursespictureBox;
     }
 }
