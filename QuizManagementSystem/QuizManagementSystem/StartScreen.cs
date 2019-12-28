@@ -18,11 +18,11 @@ namespace QuizManagementSystem
         }
         public void progBar()
         {
-            progressBar1.Increment(1);
-            label1.Text = "Loading " + progressBar1.Value.ToString() + "%";
-            if (progressBar1.Value == progressBar1.Maximum)
+            StartScreenprogressBar.Increment(1);
+            Loadinglabel.Text = "Loading " + StartScreenprogressBar.Value.ToString() + "%";
+            if (StartScreenprogressBar.Value == StartScreenprogressBar.Maximum)
             {
-                timer1.Stop();
+                StartScreeentimer.Stop();
                 LoginForm lf = new LoginForm();
                 lf.Show();
                 this.Hide();

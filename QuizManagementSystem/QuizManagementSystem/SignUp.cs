@@ -145,5 +145,43 @@ namespace QuizManagementSystem
             this.Hide();
             loginForm.Show();
         }
+
+        private void SignupUsernametextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && (!char.IsLetter(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Username should only be Alphabatic with no space!");
+            }
+        }
+
+        private void SignupPasswardtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && (!char.IsLetterOrDigit(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Username should only be Alphanumeric!");
+            }
+        }
+
+        private void SignupDepartmenttextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && (!char.IsLetter(e.KeyChar)) && (!char.IsWhiteSpace(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Department name should only be Alphabatic!");
+            }
+        }
+
+        private void TeacherSignupCourseNametextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && (!char.IsLetter(e.KeyChar)) && (!char.IsWhiteSpace(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Course name should only be Alphabatic!");
+            }
+        }
+
+      
     }
 }

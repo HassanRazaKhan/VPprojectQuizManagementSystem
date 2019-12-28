@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartScreen));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.StartScreenprogressBar = new System.Windows.Forms.ProgressBar();
+            this.StartScreeentimer = new System.Windows.Forms.Timer(this.components);
+            this.Loadinglabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,31 +48,30 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // progressBar1
+            // StartScreenprogressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(134, 329);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(471, 23);
-            this.progressBar1.TabIndex = 1;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            this.StartScreenprogressBar.Location = new System.Drawing.Point(134, 329);
+            this.StartScreenprogressBar.Name = "StartScreenprogressBar";
+            this.StartScreenprogressBar.Size = new System.Drawing.Size(471, 23);
+            this.StartScreenprogressBar.TabIndex = 1;
+            this.StartScreenprogressBar.Click += new System.EventHandler(this.progressBar1_Click);
             // 
-            // timer1
+            // StartScreeentimer
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 20;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.StartScreeentimer.Enabled = true;
+            this.StartScreeentimer.Interval = 20;
+            this.StartScreeentimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label1
+            // Loadinglabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(341, 372);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.Loadinglabel.AutoSize = true;
+            this.Loadinglabel.BackColor = System.Drawing.Color.Transparent;
+            this.Loadinglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loadinglabel.ForeColor = System.Drawing.Color.White;
+            this.Loadinglabel.Location = new System.Drawing.Point(341, 372);
+            this.Loadinglabel.Name = "Loadinglabel";
+            this.Loadinglabel.Size = new System.Drawing.Size(0, 20);
+            this.Loadinglabel.TabIndex = 2;
             // 
             // StartScreen
             // 
@@ -82,8 +81,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 417);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.Loadinglabel);
+            this.Controls.Add(this.StartScreenprogressBar);
             this.Controls.Add(this.pictureBox1);
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -97,9 +96,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ProgressBar StartScreenprogressBar;
+        private System.Windows.Forms.Timer StartScreeentimer;
+        private System.Windows.Forms.Label Loadinglabel;
     }
 }
 

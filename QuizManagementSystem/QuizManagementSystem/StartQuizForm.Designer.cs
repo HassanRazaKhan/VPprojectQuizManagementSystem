@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartQuizForm));
-            this.CreateQuiz1button = new System.Windows.Forms.Button();
+            this.SumbitQuizbutton = new System.Windows.Forms.Button();
             this.NextQuestionbutton = new System.Windows.Forms.Button();
             this.MainMenuButton = new System.Windows.Forms.Button();
             this.QuestionHeadingLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.EnterQuizIDtextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.EnterQuizIDlabel = new System.Windows.Forms.Label();
             this.AoptionradioButton = new System.Windows.Forms.RadioButton();
             this.BoptionRadioButton = new System.Windows.Forms.RadioButton();
             this.CoptionRadioButton = new System.Windows.Forms.RadioButton();
             this.DoptionRadioButton = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.CoureNamelabel = new System.Windows.Forms.Label();
             this.StartQuizbutton = new System.Windows.Forms.Button();
             this.StartQuizCourseNamecomboBox = new System.Windows.Forms.ComboBox();
             this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,27 +49,28 @@
             this.projectDatabaseDataSet = new QuizManagementSystem.ProjectDatabaseDataSet();
             this.teachersTableAdapter = new QuizManagementSystem.ProjectDatabaseDataSetTableAdapters.TeachersTableAdapter();
             this.QuestionLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.StartQuizdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ScoreCountlabel = new System.Windows.Forms.Label();
             this.MarksLabel = new System.Windows.Forms.Label();
+            this.StartQuiztimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // CreateQuiz1button
+            // SumbitQuizbutton
             // 
-            this.CreateQuiz1button.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.CreateQuiz1button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CreateQuiz1button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateQuiz1button.ForeColor = System.Drawing.Color.White;
-            this.CreateQuiz1button.Location = new System.Drawing.Point(623, 461);
-            this.CreateQuiz1button.Name = "CreateQuiz1button";
-            this.CreateQuiz1button.Size = new System.Drawing.Size(256, 35);
-            this.CreateQuiz1button.TabIndex = 39;
-            this.CreateQuiz1button.Text = "Sumbit Quiz";
-            this.CreateQuiz1button.UseVisualStyleBackColor = false;
-            this.CreateQuiz1button.Click += new System.EventHandler(this.CreateQuiz1button_Click);
+            this.SumbitQuizbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.SumbitQuizbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SumbitQuizbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SumbitQuizbutton.ForeColor = System.Drawing.Color.White;
+            this.SumbitQuizbutton.Location = new System.Drawing.Point(623, 461);
+            this.SumbitQuizbutton.Name = "SumbitQuizbutton";
+            this.SumbitQuizbutton.Size = new System.Drawing.Size(256, 35);
+            this.SumbitQuizbutton.TabIndex = 39;
+            this.SumbitQuizbutton.Text = "Sumbit Quiz";
+            this.SumbitQuizbutton.UseVisualStyleBackColor = false;
+            this.SumbitQuizbutton.Click += new System.EventHandler(this.SumbitQuizbutton_Click);
             // 
             // NextQuestionbutton
             // 
@@ -130,17 +131,17 @@
             this.EnterQuizIDtextBox.Size = new System.Drawing.Size(238, 29);
             this.EnterQuizIDtextBox.TabIndex = 24;
             // 
-            // label1
+            // EnterQuizIDlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 24);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Enter Quiz ID";
+            this.EnterQuizIDlabel.AutoSize = true;
+            this.EnterQuizIDlabel.BackColor = System.Drawing.Color.Transparent;
+            this.EnterQuizIDlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnterQuizIDlabel.ForeColor = System.Drawing.Color.White;
+            this.EnterQuizIDlabel.Location = new System.Drawing.Point(44, 27);
+            this.EnterQuizIDlabel.Name = "EnterQuizIDlabel";
+            this.EnterQuizIDlabel.Size = new System.Drawing.Size(134, 24);
+            this.EnterQuizIDlabel.TabIndex = 23;
+            this.EnterQuizIDlabel.Text = "Enter Quiz ID";
             // 
             // AoptionradioButton
             // 
@@ -194,17 +195,17 @@
             this.DoptionRadioButton.TabStop = true;
             this.DoptionRadioButton.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // CoureNamelabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(44, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 24);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Course Name";
+            this.CoureNamelabel.AutoSize = true;
+            this.CoureNamelabel.BackColor = System.Drawing.Color.Transparent;
+            this.CoureNamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CoureNamelabel.ForeColor = System.Drawing.Color.White;
+            this.CoureNamelabel.Location = new System.Drawing.Point(44, 75);
+            this.CoureNamelabel.Name = "CoureNamelabel";
+            this.CoureNamelabel.Size = new System.Drawing.Size(138, 24);
+            this.CoureNamelabel.TabIndex = 44;
+            this.CoureNamelabel.Text = "Course Name";
             // 
             // StartQuizbutton
             // 
@@ -261,24 +262,24 @@
             this.QuestionLabel.Size = new System.Drawing.Size(0, 24);
             this.QuestionLabel.TabIndex = 48;
             // 
-            // dateTimePicker1
+            // StartQuizdateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(709, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 49;
+            this.StartQuizdateTimePicker.Location = new System.Drawing.Point(709, 3);
+            this.StartQuizdateTimePicker.Name = "StartQuizdateTimePicker";
+            this.StartQuizdateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.StartQuizdateTimePicker.TabIndex = 49;
             // 
-            // label3
+            // ScoreCountlabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(705, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 24);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "Marks";
+            this.ScoreCountlabel.AutoSize = true;
+            this.ScoreCountlabel.BackColor = System.Drawing.Color.Transparent;
+            this.ScoreCountlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreCountlabel.ForeColor = System.Drawing.Color.White;
+            this.ScoreCountlabel.Location = new System.Drawing.Point(705, 42);
+            this.ScoreCountlabel.Name = "ScoreCountlabel";
+            this.ScoreCountlabel.Size = new System.Drawing.Size(65, 24);
+            this.ScoreCountlabel.TabIndex = 50;
+            this.ScoreCountlabel.Text = "Marks";
             // 
             // MarksLabel
             // 
@@ -291,6 +292,10 @@
             this.MarksLabel.Size = new System.Drawing.Size(0, 24);
             this.MarksLabel.TabIndex = 51;
             // 
+            // StartQuiztimer
+            // 
+            this.StartQuiztimer.Tick += new System.EventHandler(this.StartQuiztimer_Tick);
+            // 
             // StartQuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,23 +305,23 @@
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
             this.Controls.Add(this.MarksLabel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.ScoreCountlabel);
+            this.Controls.Add(this.StartQuizdateTimePicker);
             this.Controls.Add(this.QuestionLabel);
             this.Controls.Add(this.StartQuizCourseNamecomboBox);
             this.Controls.Add(this.StartQuizbutton);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CoureNamelabel);
             this.Controls.Add(this.DoptionRadioButton);
             this.Controls.Add(this.CoptionRadioButton);
             this.Controls.Add(this.BoptionRadioButton);
             this.Controls.Add(this.AoptionradioButton);
-            this.Controls.Add(this.CreateQuiz1button);
+            this.Controls.Add(this.SumbitQuizbutton);
             this.Controls.Add(this.NextQuestionbutton);
             this.Controls.Add(this.MainMenuButton);
             this.Controls.Add(this.QuestionHeadingLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EnterQuizIDtextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.EnterQuizIDlabel);
             this.Name = "StartQuizForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartQuizForm";
@@ -330,18 +335,18 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button CreateQuiz1button;
+        private System.Windows.Forms.Button SumbitQuizbutton;
         private System.Windows.Forms.Button NextQuestionbutton;
         private System.Windows.Forms.Button MainMenuButton;
         private System.Windows.Forms.Label QuestionHeadingLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox EnterQuizIDtextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label EnterQuizIDlabel;
         private System.Windows.Forms.RadioButton AoptionradioButton;
         private System.Windows.Forms.RadioButton BoptionRadioButton;
         private System.Windows.Forms.RadioButton CoptionRadioButton;
         private System.Windows.Forms.RadioButton DoptionRadioButton;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label CoureNamelabel;
         private System.Windows.Forms.Button StartQuizbutton;
         private System.Windows.Forms.ComboBox StartQuizCourseNamecomboBox;
         private System.Windows.Forms.BindingSource projectDatabaseDataSetBindingSource;
@@ -349,8 +354,9 @@
         private System.Windows.Forms.BindingSource teachersBindingSource;
         private ProjectDatabaseDataSetTableAdapters.TeachersTableAdapter teachersTableAdapter;
         private System.Windows.Forms.Label QuestionLabel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker StartQuizdateTimePicker;
+        private System.Windows.Forms.Label ScoreCountlabel;
         private System.Windows.Forms.Label MarksLabel;
+        private System.Windows.Forms.Timer StartQuiztimer;
     }
 }

@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.UsernametextBox = new System.Windows.Forms.TextBox();
             this.PasswardtextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Rolelabel = new System.Windows.Forms.Label();
             this.SignInbutton = new System.Windows.Forms.Button();
             this.SignUplinkLabel = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.UsernamepictureBox = new System.Windows.Forms.PictureBox();
             this.TeacherLoginradioButton = new System.Windows.Forms.RadioButton();
             this.StudentLoginradioButton = new System.Windows.Forms.RadioButton();
             this.Exitbutton = new System.Windows.Forms.Button();
             this.Loginpanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.PasswardpictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.UsernamepictureBox)).BeginInit();
             this.Loginpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswardpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // UsernametextBox
@@ -69,17 +69,17 @@
             this.PasswardtextBox.TabIndex = 3;
             this.PasswardtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label3
+            // Rolelabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(60, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Role";
+            this.Rolelabel.AutoSize = true;
+            this.Rolelabel.BackColor = System.Drawing.Color.Transparent;
+            this.Rolelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rolelabel.ForeColor = System.Drawing.Color.White;
+            this.Rolelabel.Location = new System.Drawing.Point(60, 172);
+            this.Rolelabel.Name = "Rolelabel";
+            this.Rolelabel.Size = new System.Drawing.Size(53, 24);
+            this.Rolelabel.TabIndex = 4;
+            this.Rolelabel.Text = "Role";
             // 
             // SignInbutton
             // 
@@ -101,7 +101,7 @@
             this.SignUplinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.SignUplinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUplinkLabel.LinkColor = System.Drawing.Color.White;
-            this.SignUplinkLabel.Location = new System.Drawing.Point(114, 329);
+            this.SignUplinkLabel.Location = new System.Drawing.Point(119, 320);
             this.SignUplinkLabel.Name = "SignUplinkLabel";
             this.SignUplinkLabel.Size = new System.Drawing.Size(132, 16);
             this.SignUplinkLabel.TabIndex = 7;
@@ -109,15 +109,15 @@
             this.SignUplinkLabel.Text = "Create new account?";
             this.SignUplinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignUplinkLabel_LinkClicked);
             // 
-            // pictureBox2
+            // UsernamepictureBox
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(64, 33);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
+            this.UsernamepictureBox.Image = ((System.Drawing.Image)(resources.GetObject("UsernamepictureBox.Image")));
+            this.UsernamepictureBox.Location = new System.Drawing.Point(64, 33);
+            this.UsernamepictureBox.Name = "UsernamepictureBox";
+            this.UsernamepictureBox.Size = new System.Drawing.Size(32, 29);
+            this.UsernamepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UsernamepictureBox.TabIndex = 22;
+            this.UsernamepictureBox.TabStop = false;
             // 
             // TeacherLoginradioButton
             // 
@@ -164,14 +164,14 @@
             // Loginpanel
             // 
             this.Loginpanel.BackColor = System.Drawing.Color.DodgerBlue;
-            this.Loginpanel.Controls.Add(this.pictureBox1);
+            this.Loginpanel.Controls.Add(this.PasswardpictureBox);
             this.Loginpanel.Controls.Add(this.PasswardtextBox);
             this.Loginpanel.Controls.Add(this.UsernametextBox);
             this.Loginpanel.Controls.Add(this.TeacherLoginradioButton);
-            this.Loginpanel.Controls.Add(this.label3);
+            this.Loginpanel.Controls.Add(this.Rolelabel);
             this.Loginpanel.Controls.Add(this.StudentLoginradioButton);
             this.Loginpanel.Controls.Add(this.SignInbutton);
-            this.Loginpanel.Controls.Add(this.pictureBox2);
+            this.Loginpanel.Controls.Add(this.UsernamepictureBox);
             this.Loginpanel.Controls.Add(this.SignUplinkLabel);
             this.Loginpanel.Location = new System.Drawing.Point(214, 21);
             this.Loginpanel.Name = "Loginpanel";
@@ -180,15 +180,15 @@
             this.Loginpanel.Visible = false;
             this.Loginpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Loginpanel_Paint);
             // 
-            // pictureBox1
+            // PasswardpictureBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(64, 93);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.PasswardpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PasswardpictureBox.Image")));
+            this.PasswardpictureBox.Location = new System.Drawing.Point(64, 93);
+            this.PasswardpictureBox.Name = "PasswardpictureBox";
+            this.PasswardpictureBox.Size = new System.Drawing.Size(32, 29);
+            this.PasswardpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PasswardpictureBox.TabIndex = 25;
+            this.PasswardpictureBox.TabStop = false;
             // 
             // LoginForm
             // 
@@ -204,10 +204,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsernamepictureBox)).EndInit();
             this.Loginpanel.ResumeLayout(false);
             this.Loginpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswardpictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,14 +215,14 @@
         #endregion
         private System.Windows.Forms.TextBox UsernametextBox;
         private System.Windows.Forms.TextBox PasswardtextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Rolelabel;
         private System.Windows.Forms.Button SignInbutton;
         private System.Windows.Forms.LinkLabel SignUplinkLabel;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox UsernamepictureBox;
         private System.Windows.Forms.RadioButton TeacherLoginradioButton;
         private System.Windows.Forms.RadioButton StudentLoginradioButton;
         private System.Windows.Forms.Button Exitbutton;
         private System.Windows.Forms.Panel Loginpanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PasswardpictureBox;
     }
 }

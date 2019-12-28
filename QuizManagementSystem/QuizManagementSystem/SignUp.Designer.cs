@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.SignupUsernametextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.SignupUsernamelabel = new System.Windows.Forms.Label();
             this.SignupDepartmenttextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.SignupDepartmentlabel = new System.Windows.Forms.Label();
             this.SignupEmailtextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.SignupEmaillabel = new System.Windows.Forms.Label();
             this.SignupPasswardtextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.SignupPasswardlabel = new System.Windows.Forms.Label();
             this.SignUpbutton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.SignupRolelabel = new System.Windows.Forms.Label();
             this.StudentSignupradioButton = new System.Windows.Forms.RadioButton();
             this.TeacherSignupradioButton = new System.Windows.Forms.RadioButton();
             this.TeacherSignupCourseNametextBox = new System.Windows.Forms.TextBox();
@@ -53,18 +53,19 @@
             this.SignupUsernametextBox.Name = "SignupUsernametextBox";
             this.SignupUsernametextBox.Size = new System.Drawing.Size(405, 29);
             this.SignupUsernametextBox.TabIndex = 4;
+            this.SignupUsernametextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignupUsernametextBox_KeyPress);
             // 
-            // label1
+            // SignupUsernamelabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(107, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Username";
+            this.SignupUsernamelabel.AutoSize = true;
+            this.SignupUsernamelabel.BackColor = System.Drawing.Color.Transparent;
+            this.SignupUsernamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupUsernamelabel.ForeColor = System.Drawing.Color.White;
+            this.SignupUsernamelabel.Location = new System.Drawing.Point(107, 102);
+            this.SignupUsernamelabel.Name = "SignupUsernamelabel";
+            this.SignupUsernamelabel.Size = new System.Drawing.Size(105, 24);
+            this.SignupUsernamelabel.TabIndex = 3;
+            this.SignupUsernamelabel.Text = "Username";
             // 
             // SignupDepartmenttextBox
             // 
@@ -76,19 +77,20 @@
             this.SignupDepartmenttextBox.TabIndex = 6;
             this.SignupDepartmenttextBox.Text = "e.g. : Software Engineering";
             this.SignupDepartmenttextBox.Enter += new System.EventHandler(this.SignupDepartmenttextBox_Enter);
+            this.SignupDepartmenttextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignupDepartmenttextBox_KeyPress);
             this.SignupDepartmenttextBox.Leave += new System.EventHandler(this.SignupDepartmenttextBox_Leave);
             // 
-            // label2
+            // SignupDepartmentlabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(107, 267);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 24);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Department";
+            this.SignupDepartmentlabel.AutoSize = true;
+            this.SignupDepartmentlabel.BackColor = System.Drawing.Color.Transparent;
+            this.SignupDepartmentlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupDepartmentlabel.ForeColor = System.Drawing.Color.White;
+            this.SignupDepartmentlabel.Location = new System.Drawing.Point(107, 267);
+            this.SignupDepartmentlabel.Name = "SignupDepartmentlabel";
+            this.SignupDepartmentlabel.Size = new System.Drawing.Size(117, 24);
+            this.SignupDepartmentlabel.TabIndex = 5;
+            this.SignupDepartmentlabel.Text = "Department";
             // 
             // SignupEmailtextBox
             // 
@@ -102,17 +104,17 @@
             this.SignupEmailtextBox.Enter += new System.EventHandler(this.SignupEmailtextBox_Enter);
             this.SignupEmailtextBox.Leave += new System.EventHandler(this.SignupEmailtextBox_Leave);
             // 
-            // label4
+            // SignupEmaillabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(107, 214);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 24);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Email";
+            this.SignupEmaillabel.AutoSize = true;
+            this.SignupEmaillabel.BackColor = System.Drawing.Color.Transparent;
+            this.SignupEmaillabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupEmaillabel.ForeColor = System.Drawing.Color.White;
+            this.SignupEmaillabel.Location = new System.Drawing.Point(107, 214);
+            this.SignupEmaillabel.Name = "SignupEmaillabel";
+            this.SignupEmaillabel.Size = new System.Drawing.Size(62, 24);
+            this.SignupEmaillabel.TabIndex = 9;
+            this.SignupEmaillabel.Text = "Email";
             // 
             // SignupPasswardtextBox
             // 
@@ -121,18 +123,19 @@
             this.SignupPasswardtextBox.Name = "SignupPasswardtextBox";
             this.SignupPasswardtextBox.Size = new System.Drawing.Size(405, 29);
             this.SignupPasswardtextBox.TabIndex = 12;
+            this.SignupPasswardtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignupPasswardtextBox_KeyPress);
             // 
-            // label5
+            // SignupPasswardlabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(107, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 24);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Passward";
+            this.SignupPasswardlabel.AutoSize = true;
+            this.SignupPasswardlabel.BackColor = System.Drawing.Color.Transparent;
+            this.SignupPasswardlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupPasswardlabel.ForeColor = System.Drawing.Color.White;
+            this.SignupPasswardlabel.Location = new System.Drawing.Point(107, 160);
+            this.SignupPasswardlabel.Name = "SignupPasswardlabel";
+            this.SignupPasswardlabel.Size = new System.Drawing.Size(99, 24);
+            this.SignupPasswardlabel.TabIndex = 11;
+            this.SignupPasswardlabel.Text = "Passward";
             // 
             // SignUpbutton
             // 
@@ -148,17 +151,17 @@
             this.SignUpbutton.UseVisualStyleBackColor = false;
             this.SignUpbutton.Click += new System.EventHandler(this.SignUpbutton_Click);
             // 
-            // label3
+            // SignupRolelabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(107, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 24);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Role";
+            this.SignupRolelabel.AutoSize = true;
+            this.SignupRolelabel.BackColor = System.Drawing.Color.Transparent;
+            this.SignupRolelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupRolelabel.ForeColor = System.Drawing.Color.White;
+            this.SignupRolelabel.Location = new System.Drawing.Point(107, 49);
+            this.SignupRolelabel.Name = "SignupRolelabel";
+            this.SignupRolelabel.Size = new System.Drawing.Size(53, 24);
+            this.SignupRolelabel.TabIndex = 14;
+            this.SignupRolelabel.Text = "Role";
             // 
             // StudentSignupradioButton
             // 
@@ -197,6 +200,7 @@
             this.TeacherSignupCourseNametextBox.Name = "TeacherSignupCourseNametextBox";
             this.TeacherSignupCourseNametextBox.Size = new System.Drawing.Size(405, 29);
             this.TeacherSignupCourseNametextBox.TabIndex = 17;
+            this.TeacherSignupCourseNametextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TeacherSignupCourseNametextBox_KeyPress);
             // 
             // CourseNamelabel
             // 
@@ -236,16 +240,16 @@
             this.Controls.Add(this.TeacherSignupCourseNametextBox);
             this.Controls.Add(this.TeacherSignupradioButton);
             this.Controls.Add(this.StudentSignupradioButton);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.SignupRolelabel);
             this.Controls.Add(this.SignUpbutton);
             this.Controls.Add(this.SignupPasswardtextBox);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.SignupPasswardlabel);
             this.Controls.Add(this.SignupEmailtextBox);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.SignupEmaillabel);
             this.Controls.Add(this.SignupDepartmenttextBox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SignupDepartmentlabel);
             this.Controls.Add(this.SignupUsernametextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SignupUsernamelabel);
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
@@ -258,15 +262,15 @@
         #endregion
 
         private System.Windows.Forms.TextBox SignupUsernametextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SignupUsernamelabel;
         private System.Windows.Forms.TextBox SignupDepartmenttextBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label SignupDepartmentlabel;
         private System.Windows.Forms.TextBox SignupEmailtextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label SignupEmaillabel;
         private System.Windows.Forms.TextBox SignupPasswardtextBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label SignupPasswardlabel;
         private System.Windows.Forms.Button SignUpbutton;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label SignupRolelabel;
         private System.Windows.Forms.RadioButton StudentSignupradioButton;
         private System.Windows.Forms.RadioButton TeacherSignupradioButton;
         private System.Windows.Forms.TextBox TeacherSignupCourseNametextBox;

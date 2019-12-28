@@ -5793,7 +5793,7 @@
         r/9F9V4BgBb98P/9/wGBlppv8DJooAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="WelcomepictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAApQAAAC9CAYAAAAN8+3rAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAAAd0SU1FB94IBQI3JEzO/IcAAP+fSURBVHhe7L13nJRVti5czozQlXNXVWe6G2ia
@@ -8106,6 +8106,9 @@
         k/Fr/Bq/xq83X0y//u/S+DV+jV/j1/+ga8KE/x8oXWjOigg1CAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="Teachertimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

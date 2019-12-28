@@ -32,8 +32,8 @@
             this.MainMenuButton = new System.Windows.Forms.Button();
             this.SearchTeachertextBox = new System.Windows.Forms.TextBox();
             this.viewTeacherstsdataGridView = new System.Windows.Forms.DataGridView();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.vScrollBar = new System.Windows.Forms.VScrollBar();
+            this.ViewTeacherhScrollBar = new System.Windows.Forms.HScrollBar();
             this.SearchTeacherstpictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.viewTeacherstsdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchTeacherstpictureBox)).BeginInit();
@@ -57,9 +57,9 @@
             // 
             this.SearchTeachertextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchTeachertextBox.ForeColor = System.Drawing.Color.Gray;
-            this.SearchTeachertextBox.Location = new System.Drawing.Point(298, 53);
+            this.SearchTeachertextBox.Location = new System.Drawing.Point(151, 53);
             this.SearchTeachertextBox.Name = "SearchTeachertextBox";
-            this.SearchTeachertextBox.Size = new System.Drawing.Size(328, 29);
+            this.SearchTeachertextBox.Size = new System.Drawing.Size(627, 29);
             this.SearchTeachertextBox.TabIndex = 40;
             this.SearchTeachertextBox.Text = "Search By Username";
             this.SearchTeachertextBox.Enter += new System.EventHandler(this.SearchTeachertextBox_Enter);
@@ -75,25 +75,25 @@
             this.viewTeacherstsdataGridView.TabIndex = 38;
             this.viewTeacherstsdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewStudentsdataGridView_CellContentClick);
             // 
-            // vScrollBar1
+            // vScrollBar
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(625, 108);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 316);
-            this.vScrollBar1.TabIndex = 43;
+            this.vScrollBar.Location = new System.Drawing.Point(625, 108);
+            this.vScrollBar.Name = "vScrollBar";
+            this.vScrollBar.Size = new System.Drawing.Size(17, 316);
+            this.vScrollBar.TabIndex = 43;
             // 
-            // hScrollBar1
+            // ViewTeacherhScrollBar
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(298, 424);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(344, 17);
-            this.hScrollBar1.TabIndex = 42;
+            this.ViewTeacherhScrollBar.Location = new System.Drawing.Point(298, 424);
+            this.ViewTeacherhScrollBar.Name = "ViewTeacherhScrollBar";
+            this.ViewTeacherhScrollBar.Size = new System.Drawing.Size(344, 17);
+            this.ViewTeacherhScrollBar.TabIndex = 42;
             // 
             // SearchTeacherstpictureBox
             // 
             this.SearchTeacherstpictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchTeacherstpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SearchTeacherstpictureBox.Image")));
-            this.SearchTeacherstpictureBox.Location = new System.Drawing.Point(610, 53);
+            this.SearchTeacherstpictureBox.Location = new System.Drawing.Point(746, 53);
             this.SearchTeacherstpictureBox.Name = "SearchTeacherstpictureBox";
             this.SearchTeacherstpictureBox.Size = new System.Drawing.Size(32, 29);
             this.SearchTeacherstpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,8 +110,8 @@
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
             this.Controls.Add(this.SearchTeacherstpictureBox);
-            this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.hScrollBar1);
+            this.Controls.Add(this.vScrollBar);
+            this.Controls.Add(this.ViewTeacherhScrollBar);
             this.Controls.Add(this.SearchTeachertextBox);
             this.Controls.Add(this.viewTeacherstsdataGridView);
             this.Controls.Add(this.MainMenuButton);
@@ -130,8 +130,8 @@
         private System.Windows.Forms.Button MainMenuButton;
         private System.Windows.Forms.TextBox SearchTeachertextBox;
         private System.Windows.Forms.DataGridView viewTeacherstsdataGridView;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.VScrollBar vScrollBar;
+        private System.Windows.Forms.HScrollBar ViewTeacherhScrollBar;
         private System.Windows.Forms.PictureBox SearchTeacherstpictureBox;
     }
 }

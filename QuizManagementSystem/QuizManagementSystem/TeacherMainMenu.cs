@@ -103,5 +103,7 @@ namespace QuizManagementSystem
             this.Hide();
             lf.Show();
         }
+
+       
     }
 }

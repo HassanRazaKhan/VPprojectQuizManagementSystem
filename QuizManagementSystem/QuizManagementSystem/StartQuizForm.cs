@@ -30,7 +30,8 @@ namespace QuizManagementSystem
         }
         private void StartQuizForm_Load(object sender, EventArgs e)
         {
-            
+            StartQuiztimer.Start();
+            StartQuiztimer.Enabled = true;
             // TODO: This line of code loads data into the 'projectDatabaseDataSet.Teachers' table. You can move, or remove it, as needed.
             this.teachersTableAdapter.Fill(this.projectDatabaseDataSet.Teachers);
             QuestionHeadingLabel.Visible = false;
@@ -69,8 +70,8 @@ namespace QuizManagementSystem
                     this.EnterQuizIDtextBox.Visible = false;
                     this.StartQuizCourseNamecomboBox.Visible = false;
                     this.StartQuizbutton.Visible = false;
-                    this.label1.Text = "Quiz ID: " + this.EnterQuizIDtextBox.Text;
-                    this.label4.Text = "Course Name: " + this.StartQuizCourseNamecomboBox.Text;
+                    this.EnterQuizIDlabel.Text = "Quiz ID: " + this.EnterQuizIDtextBox.Text;
+                    this.CoureNamelabel.Text = "Course Name: " + this.StartQuizCourseNamecomboBox.Text;
                 }
                 catch (Exception ex)
                 {
@@ -149,7 +150,7 @@ namespace QuizManagementSystem
                 inputAnswer = CoptionRadioButton.Text;
             else if (DoptionRadioButton.Checked == true)
                 inputAnswer = DoptionRadioButton.Text;
-            else;
+            
 
             if (EnterQuizIDtextBox.Text != null && StartQuizCourseNamecomboBox.Text.ToString() != null)
             {
@@ -174,9 +175,9 @@ namespace QuizManagementSystem
             }
         }
 
-        private void CreateQuiz1button_Click(object sender, EventArgs e)
+        private void SumbitQuizbutton_Click(object sender, EventArgs e)
         {
-            string inputAnswer="";
+            string inputAnswer = "";
             if (AoptionradioButton.Checked == true)
                 inputAnswer = AoptionradioButton.Text;
             else if (BoptionRadioButton.Checked == true)
@@ -192,12 +193,12 @@ namespace QuizManagementSystem
 
             SqlConnection myconn;
             SqlCommand sqlCmd;
-            
-                query = ("Select * FROM Questions where CorrectAnswer ='" + inputAnswer + "'");
+
+            query = ("Select * FROM Questions where CorrectAnswer ='" + inputAnswer + "'");
             myconn = new SqlConnection(obj.locate);
             sqlCmd = new SqlCommand(query, myconn);
             DataTable dt = new DataTable();
-           
+
             myconn.Open();
 
 
@@ -226,7 +227,18 @@ namespace QuizManagementSystem
 
             myconn.Close();
         }
+
+        private void StartQuiztimer_Tick(object sender, EventArgs e)
+        {
+            Random ran = new Random();
+            int A = ran.Next(0, 255);
+            int R = ran.Next(0, 255);
+            int G = ran.Next(0, 255);
+            int B = ran.Next(0, 255);
+            StartQuizbutton.ForeColor = Color.FromArgb(A, R, G, B);
+        }
     }
+    
 }
             
 

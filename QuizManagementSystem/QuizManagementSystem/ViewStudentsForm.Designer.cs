@@ -32,8 +32,8 @@
             this.MainMenuButton = new System.Windows.Forms.Button();
             this.viewStudentsdataGridView = new System.Windows.Forms.DataGridView();
             this.SearchStudenttextBox = new System.Windows.Forms.TextBox();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.StudentSearchhScrollBar = new System.Windows.Forms.HScrollBar();
+            this.StudentSearchvScrollBar = new System.Windows.Forms.VScrollBar();
             this.SearchStudentpictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.viewStudentsdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchStudentpictureBox)).BeginInit();
@@ -66,33 +66,33 @@
             // 
             this.SearchStudenttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchStudenttextBox.ForeColor = System.Drawing.Color.Gray;
-            this.SearchStudenttextBox.Location = new System.Drawing.Point(311, 39);
+            this.SearchStudenttextBox.Location = new System.Drawing.Point(158, 39);
             this.SearchStudenttextBox.Name = "SearchStudenttextBox";
-            this.SearchStudenttextBox.Size = new System.Drawing.Size(344, 29);
+            this.SearchStudenttextBox.Size = new System.Drawing.Size(639, 29);
             this.SearchStudenttextBox.TabIndex = 23;
             this.SearchStudenttextBox.Text = "Search By Username";
             this.SearchStudenttextBox.Enter += new System.EventHandler(this.SearchStudenttextBox_Enter);
             this.SearchStudenttextBox.Leave += new System.EventHandler(this.SearchStudenttextBox_Leave);
             // 
-            // hScrollBar1
+            // StudentSearchhScrollBar
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(311, 407);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(344, 17);
-            this.hScrollBar1.TabIndex = 25;
+            this.StudentSearchhScrollBar.Location = new System.Drawing.Point(311, 407);
+            this.StudentSearchhScrollBar.Name = "StudentSearchhScrollBar";
+            this.StudentSearchhScrollBar.Size = new System.Drawing.Size(344, 17);
+            this.StudentSearchhScrollBar.TabIndex = 25;
             // 
-            // vScrollBar1
+            // StudentSearchvScrollBar
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(638, 91);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 316);
-            this.vScrollBar1.TabIndex = 26;
+            this.StudentSearchvScrollBar.Location = new System.Drawing.Point(638, 91);
+            this.StudentSearchvScrollBar.Name = "StudentSearchvScrollBar";
+            this.StudentSearchvScrollBar.Size = new System.Drawing.Size(17, 316);
+            this.StudentSearchvScrollBar.TabIndex = 26;
             // 
             // SearchStudentpictureBox
             // 
             this.SearchStudentpictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchStudentpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SearchStudentpictureBox.Image")));
-            this.SearchStudentpictureBox.Location = new System.Drawing.Point(625, 39);
+            this.SearchStudentpictureBox.Location = new System.Drawing.Point(767, 39);
             this.SearchStudentpictureBox.Name = "SearchStudentpictureBox";
             this.SearchStudentpictureBox.Size = new System.Drawing.Size(30, 29);
             this.SearchStudentpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,8 +109,8 @@
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
             this.Controls.Add(this.SearchStudentpictureBox);
-            this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.hScrollBar1);
+            this.Controls.Add(this.StudentSearchvScrollBar);
+            this.Controls.Add(this.StudentSearchhScrollBar);
             this.Controls.Add(this.SearchStudenttextBox);
             this.Controls.Add(this.viewStudentsdataGridView);
             this.Controls.Add(this.MainMenuButton);
@@ -129,8 +129,8 @@
         private System.Windows.Forms.Button MainMenuButton;
         private System.Windows.Forms.DataGridView viewStudentsdataGridView;
         private System.Windows.Forms.TextBox SearchStudenttextBox;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.HScrollBar StudentSearchhScrollBar;
+        private System.Windows.Forms.VScrollBar StudentSearchvScrollBar;
         private System.Windows.Forms.PictureBox SearchStudentpictureBox;
     }
 }

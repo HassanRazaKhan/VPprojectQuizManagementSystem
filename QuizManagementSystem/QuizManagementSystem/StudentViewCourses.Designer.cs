@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentViewCourses));
             this.MainMenuButton = new System.Windows.Forms.Button();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.ViewCoursehScrollBar = new System.Windows.Forms.HScrollBar();
+            this.ViewCoursevScrollBar = new System.Windows.Forms.VScrollBar();
             this.SearchStudentsCoursetextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.SearchCourselabel = new System.Windows.Forms.Label();
             this.viewStudentsCoursetsdataGridView = new System.Windows.Forms.DataGridView();
             this.SearchStudentCoursespictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.viewStudentsCoursetsdataGridView)).BeginInit();
@@ -54,39 +54,39 @@
             this.MainMenuButton.UseVisualStyleBackColor = false;
             this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
-            // hScrollBar1
+            // ViewCoursehScrollBar
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(296, 423);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(344, 17);
-            this.hScrollBar1.TabIndex = 55;
+            this.ViewCoursehScrollBar.Location = new System.Drawing.Point(296, 423);
+            this.ViewCoursehScrollBar.Name = "ViewCoursehScrollBar";
+            this.ViewCoursehScrollBar.Size = new System.Drawing.Size(344, 17);
+            this.ViewCoursehScrollBar.TabIndex = 55;
             // 
-            // vScrollBar1
+            // ViewCoursevScrollBar
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(623, 107);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 316);
-            this.vScrollBar1.TabIndex = 54;
+            this.ViewCoursevScrollBar.Location = new System.Drawing.Point(623, 107);
+            this.ViewCoursevScrollBar.Name = "ViewCoursevScrollBar";
+            this.ViewCoursevScrollBar.Size = new System.Drawing.Size(17, 316);
+            this.ViewCoursevScrollBar.TabIndex = 54;
             // 
             // SearchStudentsCoursetextBox
             // 
             this.SearchStudentsCoursetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchStudentsCoursetextBox.Location = new System.Drawing.Point(264, 52);
+            this.SearchStudentsCoursetextBox.Location = new System.Drawing.Point(165, 52);
             this.SearchStudentsCoursetextBox.Name = "SearchStudentsCoursetextBox";
-            this.SearchStudentsCoursetextBox.Size = new System.Drawing.Size(405, 29);
+            this.SearchStudentsCoursetextBox.Size = new System.Drawing.Size(614, 29);
             this.SearchStudentsCoursetextBox.TabIndex = 52;
             // 
-            // label1
+            // SearchCourselabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(260, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 24);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Search Course";
+            this.SearchCourselabel.AutoSize = true;
+            this.SearchCourselabel.BackColor = System.Drawing.Color.Transparent;
+            this.SearchCourselabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchCourselabel.ForeColor = System.Drawing.Color.White;
+            this.SearchCourselabel.Location = new System.Drawing.Point(161, 25);
+            this.SearchCourselabel.Name = "SearchCourselabel";
+            this.SearchCourselabel.Size = new System.Drawing.Size(149, 24);
+            this.SearchCourselabel.TabIndex = 51;
+            this.SearchCourselabel.Text = "Search Course";
             // 
             // viewStudentsCoursetsdataGridView
             // 
@@ -101,7 +101,7 @@
             // 
             this.SearchStudentCoursespictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchStudentCoursespictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SearchStudentCoursespictureBox.Image")));
-            this.SearchStudentCoursespictureBox.Location = new System.Drawing.Point(639, 52);
+            this.SearchStudentCoursespictureBox.Location = new System.Drawing.Point(749, 52);
             this.SearchStudentCoursespictureBox.Name = "SearchStudentCoursespictureBox";
             this.SearchStudentCoursespictureBox.Size = new System.Drawing.Size(30, 29);
             this.SearchStudentCoursespictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,10 +118,10 @@
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
             this.Controls.Add(this.SearchStudentCoursespictureBox);
-            this.Controls.Add(this.hScrollBar1);
-            this.Controls.Add(this.vScrollBar1);
+            this.Controls.Add(this.ViewCoursehScrollBar);
+            this.Controls.Add(this.ViewCoursevScrollBar);
             this.Controls.Add(this.SearchStudentsCoursetextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SearchCourselabel);
             this.Controls.Add(this.viewStudentsCoursetsdataGridView);
             this.Controls.Add(this.MainMenuButton);
             this.Name = "StudentViewCourses";
@@ -137,10 +137,10 @@
         #endregion
 
         private System.Windows.Forms.Button MainMenuButton;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.HScrollBar ViewCoursehScrollBar;
+        private System.Windows.Forms.VScrollBar ViewCoursevScrollBar;
         private System.Windows.Forms.TextBox SearchStudentsCoursetextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SearchCourselabel;
         private System.Windows.Forms.DataGridView viewStudentsCoursetsdataGridView;
         private System.Windows.Forms.PictureBox SearchStudentCoursespictureBox;
     }

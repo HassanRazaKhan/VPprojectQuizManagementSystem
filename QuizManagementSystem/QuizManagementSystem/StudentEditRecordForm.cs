@@ -54,5 +54,32 @@ namespace QuizManagementSystem
             mainMenu.Show();
             obj.con.Close();
         }
+
+        private void StudentsEditUsernametextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && (!char.IsLetter(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Username should only be Alphabatic with no space!");
+            }
+        }
+
+        private void StudentsEditPasswardtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && (!char.IsLetterOrDigit(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Passward should only be Alphanumeric!");
+            }
+        }
+
+        private void StudentsEditDepartmenttextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && (!char.IsLetter(e.KeyChar)) && (!char.IsWhiteSpace(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Username should only be Alphabatic!");
+            }
+        }
     }
 }

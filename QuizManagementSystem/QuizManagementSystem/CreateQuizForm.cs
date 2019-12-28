@@ -29,7 +29,9 @@ namespace QuizManagementSystem
 
         private void CreateQuiz1button_Click(object sender, EventArgs e)
         {
-            if (QuizIDtextBox.Text != null && CourseNamecomboBox.Text.ToString() != null && AddQuestiontextBox.Text != null && OptionAtextBox.Text != null && OptionCtextBox.Text != null && OptionDtextBox.Text != null && CorrectAnswertextBox.Text != null)
+           
+            
+           if (QuizIDtextBox.Text != null && CourseNamecomboBox.Text.ToString() != null && AddQuestiontextBox.Text != null && OptionAtextBox.Text != null && OptionCtextBox.Text != null && OptionDtextBox.Text != null && CorrectAnswertextBox.Text != null)
             {
                 try
                 {
@@ -76,7 +78,7 @@ namespace QuizManagementSystem
                     obj.cmd.CommandText = insertUser;
                     obj.cmd.ExecuteNonQuery();
                     obj.con.Close();
-                    MessageBox.Show("Quiz Created Successfully");
+                  
                     QuizIDtextBox.Text = "";
                     CourseNamecomboBox.Text = "";
                     AddQuestiontextBox.Text = "";

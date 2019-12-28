@@ -29,111 +29,111 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentMainMenu));
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.SignOutlabel = new System.Windows.Forms.Label();
+            this.EditInfolabel = new System.Windows.Forms.Label();
+            this.ViewResultslabel = new System.Windows.Forms.Label();
+            this.viewCourseslabel = new System.Windows.Forms.Label();
+            this.ViewTeacherlabel = new System.Windows.Forms.Label();
+            this.StartQuizlabel = new System.Windows.Forms.Label();
             this.StartQuizpictureBox = new System.Windows.Forms.PictureBox();
             this.StudentsViewCoursespictureBox = new System.Windows.Forms.PictureBox();
             this.StudentsEditRecordspictureBox = new System.Windows.Forms.PictureBox();
             this.StudentsViewResultspictureBox = new System.Windows.Forms.PictureBox();
             this.StudentsSignOutpictureBox = new System.Windows.Forms.PictureBox();
             this.ViewTeacherspictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.WelcomepictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.StartQuizpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsViewCoursespictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsEditRecordspictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsViewResultspictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsSignOutpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewTeacherspictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WelcomepictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // label6
+            // SignOutlabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(743, 485);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 24);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Sign Out";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.SignOutlabel.AutoSize = true;
+            this.SignOutlabel.BackColor = System.Drawing.Color.Transparent;
+            this.SignOutlabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SignOutlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignOutlabel.ForeColor = System.Drawing.Color.White;
+            this.SignOutlabel.Location = new System.Drawing.Point(743, 485);
+            this.SignOutlabel.Name = "SignOutlabel";
+            this.SignOutlabel.Size = new System.Drawing.Size(91, 24);
+            this.SignOutlabel.TabIndex = 45;
+            this.SignOutlabel.Text = "Sign Out";
+            this.SignOutlabel.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label5
+            // EditInfolabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(401, 485);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 24);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Edit Records";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.EditInfolabel.AutoSize = true;
+            this.EditInfolabel.BackColor = System.Drawing.Color.Transparent;
+            this.EditInfolabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EditInfolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditInfolabel.ForeColor = System.Drawing.Color.White;
+            this.EditInfolabel.Location = new System.Drawing.Point(384, 488);
+            this.EditInfolabel.Name = "EditInfolabel";
+            this.EditInfolabel.Size = new System.Drawing.Size(155, 24);
+            this.EditInfolabel.TabIndex = 44;
+            this.EditInfolabel.Text = "Edit Information";
+            this.EditInfolabel.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label4
+            // ViewResultslabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(58, 485);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 24);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "View Results";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.ViewResultslabel.AutoSize = true;
+            this.ViewResultslabel.BackColor = System.Drawing.Color.Transparent;
+            this.ViewResultslabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewResultslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewResultslabel.ForeColor = System.Drawing.Color.White;
+            this.ViewResultslabel.Location = new System.Drawing.Point(58, 485);
+            this.ViewResultslabel.Name = "ViewResultslabel";
+            this.ViewResultslabel.Size = new System.Drawing.Size(130, 24);
+            this.ViewResultslabel.TabIndex = 43;
+            this.ViewResultslabel.Text = "View Results";
+            this.ViewResultslabel.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label3
+            // viewCourseslabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(717, 300);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 24);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "View Courses";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.viewCourseslabel.AutoSize = true;
+            this.viewCourseslabel.BackColor = System.Drawing.Color.Transparent;
+            this.viewCourseslabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewCourseslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewCourseslabel.ForeColor = System.Drawing.Color.White;
+            this.viewCourseslabel.Location = new System.Drawing.Point(717, 300);
+            this.viewCourseslabel.Name = "viewCourseslabel";
+            this.viewCourseslabel.Size = new System.Drawing.Size(139, 24);
+            this.viewCourseslabel.TabIndex = 42;
+            this.viewCourseslabel.Text = "View Courses";
+            this.viewCourseslabel.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label2
+            // ViewTeacherlabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(384, 300);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 24);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "View Teachers";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.ViewTeacherlabel.AutoSize = true;
+            this.ViewTeacherlabel.BackColor = System.Drawing.Color.Transparent;
+            this.ViewTeacherlabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewTeacherlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewTeacherlabel.ForeColor = System.Drawing.Color.White;
+            this.ViewTeacherlabel.Location = new System.Drawing.Point(384, 300);
+            this.ViewTeacherlabel.Name = "ViewTeacherlabel";
+            this.ViewTeacherlabel.Size = new System.Drawing.Size(150, 24);
+            this.ViewTeacherlabel.TabIndex = 41;
+            this.ViewTeacherlabel.Text = "View Teachers";
+            this.ViewTeacherlabel.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label13
+            // StartQuizlabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(58, 300);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(100, 24);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "Start Quiz";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.StartQuizlabel.AutoSize = true;
+            this.StartQuizlabel.BackColor = System.Drawing.Color.Transparent;
+            this.StartQuizlabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StartQuizlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartQuizlabel.ForeColor = System.Drawing.Color.White;
+            this.StartQuizlabel.Location = new System.Drawing.Point(58, 300);
+            this.StartQuizlabel.Name = "StartQuizlabel";
+            this.StartQuizlabel.Size = new System.Drawing.Size(100, 24);
+            this.StartQuizlabel.TabIndex = 40;
+            this.StartQuizlabel.Text = "Start Quiz";
+            this.StartQuizlabel.Click += new System.EventHandler(this.label13_Click);
             // 
             // StartQuizpictureBox
             // 
@@ -213,17 +213,17 @@
             this.ViewTeacherspictureBox.TabStop = false;
             this.ViewTeacherspictureBox.Click += new System.EventHandler(this.ViewTeacherspictureBox_Click);
             // 
-            // pictureBox1
+            // WelcomepictureBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(913, 141);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
+            this.WelcomepictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.WelcomepictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.WelcomepictureBox.Image = ((System.Drawing.Image)(resources.GetObject("WelcomepictureBox.Image")));
+            this.WelcomepictureBox.Location = new System.Drawing.Point(-1, -13);
+            this.WelcomepictureBox.Name = "WelcomepictureBox";
+            this.WelcomepictureBox.Size = new System.Drawing.Size(913, 141);
+            this.WelcomepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.WelcomepictureBox.TabIndex = 46;
+            this.WelcomepictureBox.TabStop = false;
             // 
             // StudentMainMenu
             // 
@@ -233,13 +233,13 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.WelcomepictureBox);
+            this.Controls.Add(this.SignOutlabel);
+            this.Controls.Add(this.EditInfolabel);
+            this.Controls.Add(this.ViewResultslabel);
+            this.Controls.Add(this.viewCourseslabel);
+            this.Controls.Add(this.ViewTeacherlabel);
+            this.Controls.Add(this.StartQuizlabel);
             this.Controls.Add(this.StartQuizpictureBox);
             this.Controls.Add(this.StudentsViewCoursespictureBox);
             this.Controls.Add(this.StudentsEditRecordspictureBox);
@@ -256,25 +256,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.StudentsViewResultspictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsSignOutpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewTeacherspictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WelcomepictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label SignOutlabel;
+        private System.Windows.Forms.Label EditInfolabel;
+        private System.Windows.Forms.Label ViewResultslabel;
+        private System.Windows.Forms.Label viewCourseslabel;
+        private System.Windows.Forms.Label ViewTeacherlabel;
+        private System.Windows.Forms.Label StartQuizlabel;
         private System.Windows.Forms.PictureBox StartQuizpictureBox;
         private System.Windows.Forms.PictureBox StudentsViewCoursespictureBox;
         private System.Windows.Forms.PictureBox StudentsEditRecordspictureBox;
         private System.Windows.Forms.PictureBox StudentsViewResultspictureBox;
         private System.Windows.Forms.PictureBox StudentsSignOutpictureBox;
         private System.Windows.Forms.PictureBox ViewTeacherspictureBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox WelcomepictureBox;
     }
 }

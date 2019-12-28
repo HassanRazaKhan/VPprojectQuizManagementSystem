@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateQuizForm));
             this.QuizIDtextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.QuizIDlabel = new System.Windows.Forms.Label();
+            this.CourseNamelabel = new System.Windows.Forms.Label();
+            this.AddQuestionlabel = new System.Windows.Forms.Label();
             this.AddQuestiontextBox = new System.Windows.Forms.TextBox();
             this.OptionAtextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,15 +46,15 @@
             this.MainMenuButton = new System.Windows.Forms.Button();
             this.NextQuestionbutton = new System.Windows.Forms.Button();
             this.CreateQuiz1button = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.MustBeUniquelabel = new System.Windows.Forms.Label();
+            this.CorrectAnswerlabel = new System.Windows.Forms.Label();
             this.CorrectAnswertextBox = new System.Windows.Forms.TextBox();
             this.projectDatabaseDataSet = new QuizManagementSystem.ProjectDatabaseDataSet();
             this.projectDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CourseNamecomboBox = new System.Windows.Forms.ComboBox();
             this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teachersTableAdapter = new QuizManagementSystem.ProjectDatabaseDataSetTableAdapters.TeachersTableAdapter();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.QuizdateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDatabaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
@@ -68,41 +68,41 @@
             this.QuizIDtextBox.Size = new System.Drawing.Size(238, 29);
             this.QuizIDtextBox.TabIndex = 6;
             // 
-            // label1
+            // QuizIDlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(45, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Quiz ID";
+            this.QuizIDlabel.AutoSize = true;
+            this.QuizIDlabel.BackColor = System.Drawing.Color.Transparent;
+            this.QuizIDlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuizIDlabel.ForeColor = System.Drawing.Color.White;
+            this.QuizIDlabel.Location = new System.Drawing.Point(45, 31);
+            this.QuizIDlabel.Name = "QuizIDlabel";
+            this.QuizIDlabel.Size = new System.Drawing.Size(78, 24);
+            this.QuizIDlabel.TabIndex = 5;
+            this.QuizIDlabel.Text = "Quiz ID";
             // 
-            // label2
+            // CourseNamelabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(45, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Course Name";
+            this.CourseNamelabel.AutoSize = true;
+            this.CourseNamelabel.BackColor = System.Drawing.Color.Transparent;
+            this.CourseNamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseNamelabel.ForeColor = System.Drawing.Color.White;
+            this.CourseNamelabel.Location = new System.Drawing.Point(45, 79);
+            this.CourseNamelabel.Name = "CourseNamelabel";
+            this.CourseNamelabel.Size = new System.Drawing.Size(138, 24);
+            this.CourseNamelabel.TabIndex = 7;
+            this.CourseNamelabel.Text = "Course Name";
             // 
-            // label3
+            // AddQuestionlabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(45, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Add Question";
+            this.AddQuestionlabel.AutoSize = true;
+            this.AddQuestionlabel.BackColor = System.Drawing.Color.Transparent;
+            this.AddQuestionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddQuestionlabel.ForeColor = System.Drawing.Color.White;
+            this.AddQuestionlabel.Location = new System.Drawing.Point(45, 128);
+            this.AddQuestionlabel.Name = "AddQuestionlabel";
+            this.AddQuestionlabel.Size = new System.Drawing.Size(138, 24);
+            this.AddQuestionlabel.TabIndex = 9;
+            this.AddQuestionlabel.Text = "Add Question";
             // 
             // AddQuestiontextBox
             // 
@@ -235,29 +235,29 @@
             this.CreateQuiz1button.UseVisualStyleBackColor = false;
             this.CreateQuiz1button.Click += new System.EventHandler(this.CreateQuiz1button_Click);
             // 
-            // label8
+            // MustBeUniquelabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(479, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 13);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "*must be unique";
+            this.MustBeUniquelabel.AutoSize = true;
+            this.MustBeUniquelabel.BackColor = System.Drawing.Color.Transparent;
+            this.MustBeUniquelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MustBeUniquelabel.ForeColor = System.Drawing.Color.White;
+            this.MustBeUniquelabel.Location = new System.Drawing.Point(479, 42);
+            this.MustBeUniquelabel.Name = "MustBeUniquelabel";
+            this.MustBeUniquelabel.Size = new System.Drawing.Size(98, 13);
+            this.MustBeUniquelabel.TabIndex = 22;
+            this.MustBeUniquelabel.Text = "*must be unique";
             // 
-            // label9
+            // CorrectAnswerlabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(224, 410);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(154, 24);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Correct Answer";
+            this.CorrectAnswerlabel.AutoSize = true;
+            this.CorrectAnswerlabel.BackColor = System.Drawing.Color.Transparent;
+            this.CorrectAnswerlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CorrectAnswerlabel.ForeColor = System.Drawing.Color.White;
+            this.CorrectAnswerlabel.Location = new System.Drawing.Point(224, 410);
+            this.CorrectAnswerlabel.Name = "CorrectAnswerlabel";
+            this.CorrectAnswerlabel.Size = new System.Drawing.Size(154, 24);
+            this.CorrectAnswerlabel.TabIndex = 23;
+            this.CorrectAnswerlabel.Text = "Correct Answer";
             // 
             // CorrectAnswertextBox
             // 
@@ -298,12 +298,12 @@
             // 
             this.teachersTableAdapter.ClearBeforeFill = true;
             // 
-            // dateTimePicker1
+            // QuizdateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(699, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 26;
+            this.QuizdateTimePicker.Location = new System.Drawing.Point(699, 12);
+            this.QuizdateTimePicker.Name = "QuizdateTimePicker";
+            this.QuizdateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.QuizdateTimePicker.TabIndex = 26;
             // 
             // CreateQuizForm
             // 
@@ -313,11 +313,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 521);
             this.ControlBox = false;
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.QuizdateTimePicker);
             this.Controls.Add(this.CourseNamecomboBox);
             this.Controls.Add(this.CorrectAnswertextBox);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.CorrectAnswerlabel);
+            this.Controls.Add(this.MustBeUniquelabel);
             this.Controls.Add(this.CreateQuiz1button);
             this.Controls.Add(this.NextQuestionbutton);
             this.Controls.Add(this.MainMenuButton);
@@ -330,10 +330,10 @@
             this.Controls.Add(this.OptionAtextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.AddQuestiontextBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.AddQuestionlabel);
+            this.Controls.Add(this.CourseNamelabel);
             this.Controls.Add(this.QuizIDtextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.QuizIDlabel);
             this.Name = "CreateQuizForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateQuizForm";
@@ -349,9 +349,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox QuizIDtextBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label QuizIDlabel;
+        private System.Windows.Forms.Label CourseNamelabel;
+        private System.Windows.Forms.Label AddQuestionlabel;
         private System.Windows.Forms.TextBox AddQuestiontextBox;
         private System.Windows.Forms.TextBox OptionAtextBox;
         private System.Windows.Forms.Label label4;
@@ -364,14 +364,14 @@
         private System.Windows.Forms.Button MainMenuButton;
         private System.Windows.Forms.Button NextQuestionbutton;
         private System.Windows.Forms.Button CreateQuiz1button;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label MustBeUniquelabel;
+        private System.Windows.Forms.Label CorrectAnswerlabel;
         private System.Windows.Forms.TextBox CorrectAnswertextBox;
         private System.Windows.Forms.BindingSource projectDatabaseDataSetBindingSource;
         private ProjectDatabaseDataSet projectDatabaseDataSet;
         private System.Windows.Forms.ComboBox CourseNamecomboBox;
         private System.Windows.Forms.BindingSource teachersBindingSource;
         private ProjectDatabaseDataSetTableAdapters.TeachersTableAdapter teachersTableAdapter;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker QuizdateTimePicker;
     }
 }
