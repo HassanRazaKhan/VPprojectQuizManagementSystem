@@ -78,8 +78,13 @@ namespace QuizManagementSystem
             if (!char.IsControl(e.KeyChar) && (!char.IsLetter(e.KeyChar)) && (!char.IsWhiteSpace(e.KeyChar)))
             {
                 e.Handled = true;
-                MessageBox.Show("Username should only be Alphabatic!");
+                MessageBox.Show("UDepartment name should only be Alphabatic!");
             }
+        }
+
+        private void StudentsEditDepartmenttextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

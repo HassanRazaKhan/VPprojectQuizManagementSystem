@@ -91,6 +91,7 @@
             this.StudentsEditDepartmenttextBox.Name = "StudentsEditDepartmenttextBox";
             this.StudentsEditDepartmenttextBox.Size = new System.Drawing.Size(405, 29);
             this.StudentsEditDepartmenttextBox.TabIndex = 39;
+            this.StudentsEditDepartmenttextBox.TextChanged += new System.EventHandler(this.StudentsEditDepartmenttextBox_TextChanged);
             this.StudentsEditDepartmenttextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StudentsEditDepartmenttextBox_KeyPress);
             // 
             // NewDepartmentlabel

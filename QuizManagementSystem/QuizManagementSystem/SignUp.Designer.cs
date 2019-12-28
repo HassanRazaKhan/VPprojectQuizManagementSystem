@@ -49,7 +49,7 @@
             // SignupUsernametextBox
             // 
             this.SignupUsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignupUsernametextBox.Location = new System.Drawing.Point(302, 97);
+            this.SignupUsernametextBox.Location = new System.Drawing.Point(316, 97);
             this.SignupUsernametextBox.Name = "SignupUsernametextBox";
             this.SignupUsernametextBox.Size = new System.Drawing.Size(405, 29);
             this.SignupUsernametextBox.TabIndex = 4;
@@ -61,7 +61,7 @@
             this.SignupUsernamelabel.BackColor = System.Drawing.Color.Transparent;
             this.SignupUsernamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupUsernamelabel.ForeColor = System.Drawing.Color.White;
-            this.SignupUsernamelabel.Location = new System.Drawing.Point(107, 102);
+            this.SignupUsernamelabel.Location = new System.Drawing.Point(80, 98);
             this.SignupUsernamelabel.Name = "SignupUsernamelabel";
             this.SignupUsernamelabel.Size = new System.Drawing.Size(105, 24);
             this.SignupUsernamelabel.TabIndex = 3;
@@ -71,7 +71,7 @@
             // 
             this.SignupDepartmenttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupDepartmenttextBox.ForeColor = System.Drawing.Color.Gray;
-            this.SignupDepartmenttextBox.Location = new System.Drawing.Point(302, 262);
+            this.SignupDepartmenttextBox.Location = new System.Drawing.Point(316, 262);
             this.SignupDepartmenttextBox.Name = "SignupDepartmenttextBox";
             this.SignupDepartmenttextBox.Size = new System.Drawing.Size(405, 29);
             this.SignupDepartmenttextBox.TabIndex = 6;
@@ -86,7 +86,7 @@
             this.SignupDepartmentlabel.BackColor = System.Drawing.Color.Transparent;
             this.SignupDepartmentlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupDepartmentlabel.ForeColor = System.Drawing.Color.White;
-            this.SignupDepartmentlabel.Location = new System.Drawing.Point(107, 267);
+            this.SignupDepartmentlabel.Location = new System.Drawing.Point(80, 263);
             this.SignupDepartmentlabel.Name = "SignupDepartmentlabel";
             this.SignupDepartmentlabel.Size = new System.Drawing.Size(117, 24);
             this.SignupDepartmentlabel.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             this.SignupEmailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupEmailtextBox.ForeColor = System.Drawing.Color.Gray;
-            this.SignupEmailtextBox.Location = new System.Drawing.Point(302, 209);
+            this.SignupEmailtextBox.Location = new System.Drawing.Point(316, 209);
             this.SignupEmailtextBox.Name = "SignupEmailtextBox";
             this.SignupEmailtextBox.Size = new System.Drawing.Size(405, 29);
             this.SignupEmailtextBox.TabIndex = 10;
@@ -110,7 +110,7 @@
             this.SignupEmaillabel.BackColor = System.Drawing.Color.Transparent;
             this.SignupEmaillabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupEmaillabel.ForeColor = System.Drawing.Color.White;
-            this.SignupEmaillabel.Location = new System.Drawing.Point(107, 214);
+            this.SignupEmaillabel.Location = new System.Drawing.Point(80, 210);
             this.SignupEmaillabel.Name = "SignupEmaillabel";
             this.SignupEmaillabel.Size = new System.Drawing.Size(62, 24);
             this.SignupEmaillabel.TabIndex = 9;
@@ -119,7 +119,7 @@
             // SignupPasswardtextBox
             // 
             this.SignupPasswardtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignupPasswardtextBox.Location = new System.Drawing.Point(302, 155);
+            this.SignupPasswardtextBox.Location = new System.Drawing.Point(316, 155);
             this.SignupPasswardtextBox.Name = "SignupPasswardtextBox";
             this.SignupPasswardtextBox.Size = new System.Drawing.Size(405, 29);
             this.SignupPasswardtextBox.TabIndex = 12;
@@ -131,7 +131,7 @@
             this.SignupPasswardlabel.BackColor = System.Drawing.Color.Transparent;
             this.SignupPasswardlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupPasswardlabel.ForeColor = System.Drawing.Color.White;
-            this.SignupPasswardlabel.Location = new System.Drawing.Point(107, 160);
+            this.SignupPasswardlabel.Location = new System.Drawing.Point(80, 156);
             this.SignupPasswardlabel.Name = "SignupPasswardlabel";
             this.SignupPasswardlabel.Size = new System.Drawing.Size(99, 24);
             this.SignupPasswardlabel.TabIndex = 11;
@@ -140,6 +140,7 @@
             // SignUpbutton
             // 
             this.SignUpbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.SignUpbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignUpbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpbutton.ForeColor = System.Drawing.Color.White;
@@ -157,7 +158,7 @@
             this.SignupRolelabel.BackColor = System.Drawing.Color.Transparent;
             this.SignupRolelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupRolelabel.ForeColor = System.Drawing.Color.White;
-            this.SignupRolelabel.Location = new System.Drawing.Point(107, 49);
+            this.SignupRolelabel.Location = new System.Drawing.Point(80, 45);
             this.SignupRolelabel.Name = "SignupRolelabel";
             this.SignupRolelabel.Size = new System.Drawing.Size(53, 24);
             this.SignupRolelabel.TabIndex = 14;
@@ -169,7 +170,7 @@
             this.StudentSignupradioButton.BackColor = System.Drawing.Color.Transparent;
             this.StudentSignupradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentSignupradioButton.ForeColor = System.Drawing.Color.White;
-            this.StudentSignupradioButton.Location = new System.Drawing.Point(302, 45);
+            this.StudentSignupradioButton.Location = new System.Drawing.Point(316, 45);
             this.StudentSignupradioButton.Name = "StudentSignupradioButton";
             this.StudentSignupradioButton.Size = new System.Drawing.Size(99, 28);
             this.StudentSignupradioButton.TabIndex = 15;
@@ -184,7 +185,7 @@
             this.TeacherSignupradioButton.BackColor = System.Drawing.Color.Transparent;
             this.TeacherSignupradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeacherSignupradioButton.ForeColor = System.Drawing.Color.White;
-            this.TeacherSignupradioButton.Location = new System.Drawing.Point(601, 45);
+            this.TeacherSignupradioButton.Location = new System.Drawing.Point(615, 45);
             this.TeacherSignupradioButton.Name = "TeacherSignupradioButton";
             this.TeacherSignupradioButton.Size = new System.Drawing.Size(106, 28);
             this.TeacherSignupradioButton.TabIndex = 16;
@@ -196,7 +197,7 @@
             // TeacherSignupCourseNametextBox
             // 
             this.TeacherSignupCourseNametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeacherSignupCourseNametextBox.Location = new System.Drawing.Point(302, 315);
+            this.TeacherSignupCourseNametextBox.Location = new System.Drawing.Point(316, 315);
             this.TeacherSignupCourseNametextBox.Name = "TeacherSignupCourseNametextBox";
             this.TeacherSignupCourseNametextBox.Size = new System.Drawing.Size(405, 29);
             this.TeacherSignupCourseNametextBox.TabIndex = 17;
@@ -208,7 +209,7 @@
             this.CourseNamelabel.BackColor = System.Drawing.Color.Transparent;
             this.CourseNamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CourseNamelabel.ForeColor = System.Drawing.Color.White;
-            this.CourseNamelabel.Location = new System.Drawing.Point(107, 320);
+            this.CourseNamelabel.Location = new System.Drawing.Point(80, 316);
             this.CourseNamelabel.Name = "CourseNamelabel";
             this.CourseNamelabel.Size = new System.Drawing.Size(138, 24);
             this.CourseNamelabel.TabIndex = 18;
@@ -217,6 +218,7 @@
             // Backbutton
             // 
             this.Backbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Backbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Backbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Backbutton.ForeColor = System.Drawing.Color.White;

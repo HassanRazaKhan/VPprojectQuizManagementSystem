@@ -15,6 +15,7 @@ namespace QuizManagementSystem
     
     public partial class StartQuizForm : Form
     {
+        public int count = 0;
         private int nextQs;
         public StartQuizForm()
         {
@@ -46,18 +47,10 @@ namespace QuizManagementSystem
         private void StartQuizbutton_Click(object sender, EventArgs e)
         {
             string inputAnswer = "";
-            if (AoptionradioButton.Checked == true)
-                inputAnswer = AoptionradioButton.Text;
-            else if (BoptionRadioButton.Checked == true)
-                inputAnswer = BoptionRadioButton.Text;
-            else if (CoptionRadioButton.Checked == true)
-                inputAnswer = CoptionRadioButton.Text;
-            else if (DoptionRadioButton.Checked == true)
-                inputAnswer = DoptionRadioButton.Text;
-            else;
+            
             if (EnterQuizIDtextBox.Text != null && StartQuizCourseNamecomboBox.Text.ToString() != null)
             {
-                MarksLabel.Text = "0";
+                
                 try
                 {
                     QuestionLabel.Text = "";
@@ -66,7 +59,8 @@ namespace QuizManagementSystem
                     CoptionRadioButton.Text = "";
                     DoptionRadioButton.Text = "";
                     this.nextQs = Convert.ToInt32(this.EnterQuizIDtextBox.Text);
-                  MarksLabel.Text= Convert.ToString( showQuestions(false,inputAnswer))+Convert.ToInt32(MarksLabel.Text);
+                    showQuestions(false,inputAnswer);
+                  MarksLabel.Text= Convert.ToString( this.count);
                     this.EnterQuizIDtextBox.Visible = false;
                     this.StartQuizCourseNamecomboBox.Visible = false;
                     this.StartQuizbutton.Visible = false;
@@ -84,7 +78,7 @@ namespace QuizManagementSystem
             }
         }
 
-       private  int showQuestions(bool flag,string input)
+       private  void showQuestions(bool flag,string input)
         {
             int result = 0;
             SqlCommand cmd = new SqlCommand();
@@ -119,13 +113,13 @@ namespace QuizManagementSystem
                     DoptionRadioButton.Visible = true;
                     QuestionLabel.Text = dr.GetString(2);
                     if (input == dr.GetString(3))
-                        result += 1;
+                        count += 1;
                     else if (input == dr.GetString(4))
-                        result += 1;
+                        count += 1;
                     else if (input == dr.GetString(5))
-                        result += 1;
+                        count += 1;
                     else if (input == dr.GetString(6))
-                        result += 1;
+                        count += 1;
                     AoptionradioButton.Text = dr.GetString(3);
                     BoptionRadioButton.Text = dr.GetString(4);
                     CoptionRadioButton.Text = dr.GetString(5);
@@ -136,7 +130,7 @@ namespace QuizManagementSystem
             }
 
             myconn.Close();
-            return result;
+           
         }
 
         private void NextQuestionbutton_Click(object sender, EventArgs e)
@@ -162,7 +156,8 @@ namespace QuizManagementSystem
                     CoptionRadioButton.Text = "";
                     DoptionRadioButton.Text = "";
                     this.nextQs += 1;
-                    MarksLabel.Text = Convert.ToString(showQuestions(false, inputAnswer)) + Convert.ToInt32(MarksLabel.Text);
+                    showQuestions(false, inputAnswer);
+                    MarksLabel.Text = Convert.ToString(this.count);
                 }
                 catch (Exception ex)
                 {

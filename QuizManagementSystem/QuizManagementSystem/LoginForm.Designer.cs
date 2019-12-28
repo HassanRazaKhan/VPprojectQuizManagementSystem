@@ -49,7 +49,7 @@
             // 
             this.UsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernametextBox.ForeColor = System.Drawing.Color.Gray;
-            this.UsernametextBox.Location = new System.Drawing.Point(93, 33);
+            this.UsernametextBox.Location = new System.Drawing.Point(102, 33);
             this.UsernametextBox.Name = "UsernametextBox";
             this.UsernametextBox.Size = new System.Drawing.Size(211, 29);
             this.UsernametextBox.TabIndex = 2;
@@ -62,7 +62,7 @@
             // 
             this.PasswardtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswardtextBox.ForeColor = System.Drawing.Color.Black;
-            this.PasswardtextBox.Location = new System.Drawing.Point(93, 93);
+            this.PasswardtextBox.Location = new System.Drawing.Point(102, 93);
             this.PasswardtextBox.Name = "PasswardtextBox";
             this.PasswardtextBox.PasswordChar = '*';
             this.PasswardtextBox.Size = new System.Drawing.Size(211, 29);
@@ -84,6 +84,7 @@
             // SignInbutton
             // 
             this.SignInbutton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.SignInbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignInbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SignInbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInbutton.ForeColor = System.Drawing.Color.White;
